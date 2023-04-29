@@ -35,6 +35,7 @@ namespace LibraryProject
             this.panelHead = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnQuenMK = new System.Windows.Forms.Button();
             this.btbLogin = new System.Windows.Forms.Button();
             this.panelPassword = new System.Windows.Forms.Panel();
@@ -43,7 +44,6 @@ namespace LibraryProject
             this.panelUser = new System.Windows.Forms.Panel();
             this.tbxUser = new System.Windows.Forms.TextBox();
             this.pbxUser = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelSide.SuspendLayout();
             this.panelHead.SuspendLayout();
             this.panelMain.SuspendLayout();
@@ -128,6 +128,18 @@ namespace LibraryProject
             this.panelMain.Size = new System.Drawing.Size(800, 600);
             this.panelMain.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(384, 130);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 32);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Login";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnQuenMK
             // 
             this.btnQuenMK.BackColor = System.Drawing.SystemColors.Control;
@@ -184,6 +196,7 @@ namespace LibraryProject
             this.tbxPassword.Text = " Password";
             this.tbxPassword.UseSystemPasswordChar = true;
             this.tbxPassword.Enter += new System.EventHandler(this.tbxPassword_Enter);
+            this.tbxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxPassword_KeyDown);
             this.tbxPassword.Leave += new System.EventHandler(this.tbxPassword_Leave);
             // 
             // pbxPassword
@@ -218,6 +231,7 @@ namespace LibraryProject
             this.tbxUser.TabIndex = 1;
             this.tbxUser.Text = " Username";
             this.tbxUser.Enter += new System.EventHandler(this.tbxUser_Enter);
+            this.tbxUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxUser_KeyDown);
             this.tbxUser.Leave += new System.EventHandler(this.tbxUser_Leave);
             // 
             // pbxUser
@@ -229,18 +243,6 @@ namespace LibraryProject
             this.pbxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxUser.TabIndex = 0;
             this.pbxUser.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(384, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 32);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Login";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormLogin
             // 
@@ -254,7 +256,7 @@ namespace LibraryProject
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
-            this.Load += new System.EventHandler(this.FormLogin_Load);
+            this.Shown += new System.EventHandler(this.FormLogin_Shown);
             this.panelSide.ResumeLayout(false);
             this.panelSide.PerformLayout();
             this.panelHead.ResumeLayout(false);

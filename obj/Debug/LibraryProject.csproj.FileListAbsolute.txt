@@ -4,7 +4,6 @@ D:\projects\cs\LibraryProject\bin\Debug\LibraryProject.pdb
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.csproj.AssemblyReference.cache
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDashBoard.resources
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormCaiDat.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDocGia.resources
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormPhieuMuon.resources
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormPhieuTra.resources
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormSach.resources
@@ -15,26 +14,4 @@ D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.csproj.GenerateResource.c
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.csproj.CoreCompileInputs.cache
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.exe
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.pdb
-<<<<<<< HEAD
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormLogin.resources
-=======
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\bin\Debug\LibraryProject.exe.config
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\bin\Debug\LibraryProject.exe
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\bin\Debug\LibraryProject.pdb
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.csproj.AssemblyReference.cache
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.csproj.SuggestedBindingRedirects.cache
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.FormDashBoard.resources
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.FormCaiDat.resources
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.FormDocGia.resources
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.FormPhieuMuon.resources
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.FormPhieuTra.resources
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.FormSach.resources
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.FormThongKe.resources
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.FormThuThu.resources
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.Properties.Resources.resources
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.csproj.GenerateResource.cache
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.csproj.CoreCompileInputs.cache
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.exe
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.pdb
-D:\HK2-2023\C#\LibraryProject-main\LibraryProject-main\obj\Debug\LibraryProject.FormDangNhap.resources
->>>>>>> c7d4a57f26d3a6b0101e1117d28d2cf3736d92be

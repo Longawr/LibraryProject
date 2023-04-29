@@ -60,7 +60,7 @@ namespace LibraryProject
             this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSide.Location = new System.Drawing.Point(0, 30);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(200, 570);
+            this.panelSide.Size = new System.Drawing.Size(200, 470);
             this.panelSide.TabIndex = 0;
             // 
             // pictureBox1
@@ -206,7 +206,7 @@ namespace LibraryProject
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(1300, 30);
+            this.panelHead.Size = new System.Drawing.Size(800, 30);
             this.panelHead.TabIndex = 1;
             // 
             // btnClose
@@ -218,7 +218,7 @@ namespace LibraryProject
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1270, 0);
+            this.btnClose.Location = new System.Drawing.Point(770, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 1;
@@ -231,7 +231,7 @@ namespace LibraryProject
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(200, 30);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1100, 570);
+            this.panelMain.Size = new System.Drawing.Size(600, 470);
             this.panelMain.TabIndex = 2;
             // 
             // FormDashBoard
@@ -239,7 +239,7 @@ namespace LibraryProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1300, 600);
+            this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelSide);
             this.Controls.Add(this.panelHead);

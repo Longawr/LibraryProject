@@ -48,12 +48,6 @@
   <ItemGroup>
     <Compile Include="Controllers\Authentication.cs" />
     <Compile Include="Controllers\ConnectToDB.cs" />
-    <Compile Include="FormDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,17 +104,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormDangNhap.resx">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormDashBoard.resx">
       <DependentUpon>FormDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCaiDat.resx">
       <DependentUpon>FormCaiDat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDocGia.resx">
-      <DependentUpon>FormDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

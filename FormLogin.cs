@@ -74,10 +74,20 @@ namespace LibraryProject
 
         private void btbLogin_Click(object sender, EventArgs e)
         {
+            LoginHandle();
+        }
+
+        private void FormLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void LoginHandle()
+        {
             String username, password;
             username = tbxUser.Text;
             password = tbxPassword.Text;
-            if(authenticate(username, password))
+            if (Authenticate(username, password))
             {
                 FormDashBoard mainForm = new FormDashBoard();
                 mainForm.Show();
@@ -85,6 +95,22 @@ namespace LibraryProject
             }
             else
                 MessageBox.Show("Thông tin đăng nhập sai! vui lòng nhập lại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void tbxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+                LoginHandle();
+        }
+
+        private void tbxUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            tbxPassword.Select();
+        }
+
+        private void FormLogin_Shown(object sender, EventArgs e)
+        {
+            tbxUser.Select();
         }
     }
 }
