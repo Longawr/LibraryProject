@@ -15,14 +15,14 @@ namespace LibraryProject.Controllers
         {
             try
             {
-                return uname == "username" && upass == "password";
-                String querry = "SELECT * FROM [account] WHERE username = '" + uname + "' AND password = '" + upass + "'";
+                //return uname == "username" && upass == "password";
+                String querry = "SELECT * FROM [TaiKhoan] WHERE [username] = '" + uname + "' AND [password] = '" + upass + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
 
                 DataTable dTable = new DataTable();
                 sda.Fill(dTable);
 
-                return dTable.Rows.Count > 0 || (uname == "username" && upass == "password");
+                return dTable.Rows.Count > 0;
             }
             catch
             {

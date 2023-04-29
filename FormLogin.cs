@@ -105,7 +105,8 @@ namespace LibraryProject
 
         private void tbxUser_KeyDown(object sender, KeyEventArgs e)
         {
-            tbxPassword.Select();
+            if (e.KeyCode == Keys.Enter)
+                tbxPassword.Select();
         }
 
         private void FormLogin_Shown(object sender, EventArgs e)
