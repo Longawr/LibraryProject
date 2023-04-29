@@ -15,3 +15,4 @@ D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.csproj.CoreCompileInputs.
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.exe
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.pdb
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormLogin.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDocGia.resources

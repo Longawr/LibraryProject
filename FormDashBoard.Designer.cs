@@ -41,6 +41,7 @@ namespace LibraryProject
             this.panelHead = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.panelSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelHead.SuspendLayout();
@@ -49,6 +50,7 @@ namespace LibraryProject
             // panelSide
             // 
             this.panelSide.BackColor = System.Drawing.Color.DimGray;
+            this.panelSide.Controls.Add(this.btnTaiKhoan);
             this.panelSide.Controls.Add(this.pictureBox1);
             this.panelSide.Controls.Add(this.btnCaiDat);
             this.panelSide.Controls.Add(this.btnSach);
@@ -60,7 +62,7 @@ namespace LibraryProject
             this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSide.Location = new System.Drawing.Point(0, 30);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(200, 470);
+            this.panelSide.Size = new System.Drawing.Size(200, 550);
             this.panelSide.TabIndex = 0;
             // 
             // pictureBox1
@@ -83,7 +85,7 @@ namespace LibraryProject
             this.btnCaiDat.ForeColor = System.Drawing.Color.White;
             this.btnCaiDat.Image = global::LibraryProject.Properties.Resources.settings;
             this.btnCaiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 369);
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 475);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Size = new System.Drawing.Size(200, 30);
             this.btnCaiDat.TabIndex = 6;
@@ -101,7 +103,7 @@ namespace LibraryProject
             this.btnSach.ForeColor = System.Drawing.Color.White;
             this.btnSach.Image = global::LibraryProject.Properties.Resources.open_book__1_;
             this.btnSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSach.Location = new System.Drawing.Point(0, 153);
+            this.btnSach.Location = new System.Drawing.Point(0, 259);
             this.btnSach.Name = "btnSach";
             this.btnSach.Size = new System.Drawing.Size(200, 30);
             this.btnSach.TabIndex = 0;
@@ -119,7 +121,7 @@ namespace LibraryProject
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
             this.btnThongKe.Image = global::LibraryProject.Properties.Resources.open_book__1_;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 333);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 439);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(200, 30);
             this.btnThongKe.TabIndex = 5;
@@ -137,7 +139,7 @@ namespace LibraryProject
             this.btnPhieuMuon.ForeColor = System.Drawing.Color.White;
             this.btnPhieuMuon.Image = global::LibraryProject.Properties.Resources.open_book__1_;
             this.btnPhieuMuon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhieuMuon.Location = new System.Drawing.Point(0, 189);
+            this.btnPhieuMuon.Location = new System.Drawing.Point(0, 295);
             this.btnPhieuMuon.Name = "btnPhieuMuon";
             this.btnPhieuMuon.Size = new System.Drawing.Size(200, 30);
             this.btnPhieuMuon.TabIndex = 1;
@@ -155,7 +157,7 @@ namespace LibraryProject
             this.btnThuThu.ForeColor = System.Drawing.Color.White;
             this.btnThuThu.Image = global::LibraryProject.Properties.Resources.librarian;
             this.btnThuThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThuThu.Location = new System.Drawing.Point(0, 297);
+            this.btnThuThu.Location = new System.Drawing.Point(0, 403);
             this.btnThuThu.Name = "btnThuThu";
             this.btnThuThu.Size = new System.Drawing.Size(200, 30);
             this.btnThuThu.TabIndex = 4;
@@ -173,7 +175,7 @@ namespace LibraryProject
             this.btnPhieuTra.ForeColor = System.Drawing.Color.White;
             this.btnPhieuTra.Image = global::LibraryProject.Properties.Resources.open_book__1_;
             this.btnPhieuTra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhieuTra.Location = new System.Drawing.Point(0, 225);
+            this.btnPhieuTra.Location = new System.Drawing.Point(0, 331);
             this.btnPhieuTra.Name = "btnPhieuTra";
             this.btnPhieuTra.Size = new System.Drawing.Size(200, 30);
             this.btnPhieuTra.TabIndex = 2;
@@ -191,7 +193,7 @@ namespace LibraryProject
             this.btnDocGia.ForeColor = System.Drawing.Color.White;
             this.btnDocGia.Image = global::LibraryProject.Properties.Resources.user;
             this.btnDocGia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocGia.Location = new System.Drawing.Point(0, 261);
+            this.btnDocGia.Location = new System.Drawing.Point(0, 367);
             this.btnDocGia.Name = "btnDocGia";
             this.btnDocGia.Size = new System.Drawing.Size(200, 30);
             this.btnDocGia.TabIndex = 3;
@@ -206,7 +208,7 @@ namespace LibraryProject
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(800, 30);
+            this.panelHead.Size = new System.Drawing.Size(1000, 30);
             this.panelHead.TabIndex = 1;
             // 
             // btnClose
@@ -218,7 +220,7 @@ namespace LibraryProject
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(770, 0);
+            this.btnClose.Location = new System.Drawing.Point(970, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 1;
@@ -231,15 +233,31 @@ namespace LibraryProject
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(200, 30);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(600, 470);
+            this.panelMain.Size = new System.Drawing.Size(800, 550);
             this.panelMain.TabIndex = 2;
+            // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.DimGray;
+            this.btnTaiKhoan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.btnTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 127);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Size = new System.Drawing.Size(200, 30);
+            this.btnTaiKhoan.TabIndex = 8;
+            this.btnTaiKhoan.Text = "Tài Khoản";
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
             // 
             // FormDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(1000, 580);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelSide);
             this.Controls.Add(this.panelHead);
@@ -267,6 +285,7 @@ namespace LibraryProject
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnTaiKhoan;
     }
 }
 

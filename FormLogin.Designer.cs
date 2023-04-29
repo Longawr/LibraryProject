@@ -35,7 +35,7 @@ namespace LibraryProject
             this.panelHead = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.btnQuenMK = new System.Windows.Forms.Button();
             this.btbLogin = new System.Windows.Forms.Button();
             this.panelPassword = new System.Windows.Forms.Panel();
@@ -61,7 +61,7 @@ namespace LibraryProject
             this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSide.Location = new System.Drawing.Point(0, 30);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(328, 570);
+            this.panelSide.Size = new System.Drawing.Size(328, 520);
             this.panelSide.TabIndex = 0;
             // 
             // lblProducer
@@ -117,7 +117,7 @@ namespace LibraryProject
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.SystemColors.Control;
-            this.panelMain.Controls.Add(this.label1);
+            this.panelMain.Controls.Add(this.lblLogin);
             this.panelMain.Controls.Add(this.btnQuenMK);
             this.panelMain.Controls.Add(this.btbLogin);
             this.panelMain.Controls.Add(this.panelPassword);
@@ -125,20 +125,20 @@ namespace LibraryProject
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(800, 600);
+            this.panelMain.Size = new System.Drawing.Size(800, 550);
             this.panelMain.TabIndex = 2;
             // 
-            // label1
+            // lblLogin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(384, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 32);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Login";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.lblLogin.Location = new System.Drawing.Point(384, 130);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(79, 32);
+            this.lblLogin.TabIndex = 5;
+            this.lblLogin.Text = "Login";
+            this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnQuenMK
             // 
@@ -248,7 +248,7 @@ namespace LibraryProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(800, 550);
             this.Controls.Add(this.panelSide);
             this.Controls.Add(this.panelHead);
             this.Controls.Add(this.panelMain);
@@ -288,6 +288,6 @@ namespace LibraryProject
         private System.Windows.Forms.TextBox tbxUser;
         private System.Windows.Forms.Button btnQuenMK;
         private System.Windows.Forms.Button btbLogin;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLogin;
     }
 }
