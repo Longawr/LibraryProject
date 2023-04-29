@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Authentication.cs" />
+    <Compile Include="Controllers\ConnectToDB.cs" />
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +71,12 @@
     </Compile>
     <Compile Include="FormDocGia.Designer.cs">
       <DependentUpon>FormDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPhieuMuon.cs">
       <SubType>Form</SubType>
@@ -113,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDocGia.resx">
       <DependentUpon>FormDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPhieuMuon.resx">
       <DependentUpon>FormPhieuMuon.cs</DependentUpon>
@@ -175,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\padlock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

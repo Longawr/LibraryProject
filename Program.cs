@@ -16,7 +16,11 @@ namespace LibraryProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
+            Application.Run(new FormLogin());
+=======
             Application.Run(new FormDangNhap());
+>>>>>>> c7d4a57f26d3a6b0101e1117d28d2cf3736d92be
         }
     }
 }
