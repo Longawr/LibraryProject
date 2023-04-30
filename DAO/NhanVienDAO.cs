@@ -15,12 +15,11 @@ namespace LibraryProject.Controllers
         {
             try
             {
-                conn.Open();
-                String querry = "SELECT * FROM [NhanVien] WHERE [MaNhanVien] = '" + id + "'";
-                SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
+                String query = "SELECT * FROM [NhanVien] WHERE [MaNhanVien] = @id";
 
-                DataTable dTable = new DataTable();
-                sda.Fill(dTable);
+                object[] obj = new object[] { id };
+
+                DataTable dTable = DataProvider.Instance.ExecuteQuery(query, obj);
 
                 if (dTable.Rows.Count > 0)
                     return dTable;
@@ -29,10 +28,6 @@ namespace LibraryProject.Controllers
             catch (Exception ex)
             {
                 throw ex;
-            }
-            finally
-            {
-                conn.Close();
             }
         }
     }

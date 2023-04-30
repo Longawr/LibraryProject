@@ -17,22 +17,15 @@ namespace LibraryProject.Controllers
             try
             {
                 //return uname == "username" && upass == "password";
-                conn.Open();
-                String querry = "SELECT * FROM [TaiKhoan] WHERE [username] = '" + uname + "' AND [password] = '" + upass + "'";
-                SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
+                String query = "SELECT * FROM [TaiKhoan] WHERE [username] = @username AND [password] = @password";
 
-                DataTable dTable = new DataTable();
-                sda.Fill(dTable);
+                object[] obj = new object[] { uname, upass };
 
-                return dTable.Rows.Count > 0;
+                return DataProvider.Instance.ExecuteQuery(query, obj).Rows.Count > 0;
             }
             catch (Exception ex)
             {
                 throw ex;
-            }
-            finally
-            {
-                conn.Close();
             }
         }
 
