@@ -75,16 +75,6 @@ namespace LibraryProject
 
         private void btbLogin_Click(object sender, EventArgs e)
         {
-            LoginHandle();
-        }
-
-        private void FormLogin_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void LoginHandle()
-        {
             String username, password;
             username = tbxUser.Text;
             password = tbxPassword.Text;
@@ -107,10 +97,15 @@ namespace LibraryProject
             }
         }
 
+        private void FormLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
         private void tbxPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                LoginHandle();
+                btbLogin_Click(sender, e);
         }
 
         private void tbxUser_KeyDown(object sender, KeyEventArgs e)

@@ -20,9 +20,9 @@ namespace LibraryProject
 
         public void loadForm(object Form)
         {
+            Form f = Form as Form;
             if (this.panelMain.Controls.Count > 0)
                 this.panelMain.Controls.RemoveAt(0);
-            Form f = Form as Form;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.panelMain.Controls.Add(f);
@@ -104,7 +104,8 @@ namespace LibraryProject
 
         private void FormDashBoard_Load(object sender, EventArgs e)
         {
-            btnTaiKhoan.Text = Controllers.TaiKhoanController.userNhanVien.Rows[0][0].ToString();
+            btnTaiKhoan.Text = "Hello, " + Controllers.TaiKhoanController.userNhanVien.Rows[0][0].ToString();
+            loadForm(new FormSach());
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -117,6 +118,9 @@ namespace LibraryProject
             {
                 // If 'Yes', do something here.
                 Controllers.TaiKhoanController.DangXuat();
+                FormLogin loginform = new FormLogin();
+                loginform.Show();
+                this.Hide();
             }
             else
             {
