@@ -24,7 +24,7 @@ namespace LibraryProject.Controllers
 
         public DataProvider() { }
 
-        private string connString = @"Data Source=NGOCTRINH;Initial Catalog=QuanLyThuVienDB;Integrated Security=True";
+        private string connString = @"Data Source=DESKTOP-B8BJQUS\SQLSERVER;Initial Catalog=QuanLyThuVienDB;Integrated Security=True";
 
 
         public DataTable ExecuteQuery(string query, object[] parameters = null)
