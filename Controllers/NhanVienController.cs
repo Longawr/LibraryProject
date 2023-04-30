@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static LibraryProject.Controllers.ConnectToDB;
+using static LibraryProject.Controllers.DataProvider;
 
 namespace LibraryProject.Controllers
 {

@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="Controllers\NhanVienController.cs" />
     <Compile Include="Controllers\TaiKhoanController.cs" />
-    <Compile Include="Controllers\ConnectToDB.cs" />
+    <Compile Include="Controllers\DataProvider.cs" />
     <Compile Include="FormDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
