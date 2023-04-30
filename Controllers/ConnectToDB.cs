@@ -9,6 +9,6 @@ namespace LibraryProject.Controllers
 {
     class ConnectToDB
     {
-        static public SqlConnection conn = new SqlConnection(@"Data Source=NGOCTRINH;Initial Catalog=QuanLyThuVienDB;Integrated Security=True");
+        public static SqlConnection conn = new SqlConnection(@"Data Source=NGOCTRINH;Initial Catalog=QuanLyThuVienDB;Integrated Security=True");
     }
 }

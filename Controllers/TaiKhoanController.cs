@@ -9,13 +9,15 @@ using static LibraryProject.Controllers.ConnectToDB;
 
 namespace LibraryProject.Controllers
 {
-    class Authentication
+    class TaiKhoanController
     {
-        public static bool Authenticate(String uname, String upass)
+        public static DataTable userNhanVien;
+        public static bool DangNhap(String uname, String upass)
         {
             try
             {
                 //return uname == "username" && upass == "password";
+                conn.Open();
                 String querry = "SELECT * FROM [TaiKhoan] WHERE [username] = '" + uname + "' AND [password] = '" + upass + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
 
@@ -24,14 +26,20 @@ namespace LibraryProject.Controllers
 
                 return dTable.Rows.Count > 0;
             }
-            catch
+            catch (Exception ex)
             {
-                return false;
+                throw ex;
             }
             finally
             {
                 conn.Close();
             }
+        }
+
+        public static bool DangXuat()
+        {
+            userNhanVien = null;
+            return true;
         }
     }
 }

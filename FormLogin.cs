@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryProject.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static LibraryProject.Controllers.Authentication;
+using static LibraryProject.Controllers.TaiKhoanController;
 
 namespace LibraryProject
 {
@@ -27,7 +28,7 @@ namespace LibraryProject
         {
             panelUser.BackColor = Color.White;
             tbxUser.BackColor = Color.White;
-            if(tbxUser.Text == " Username")
+            if (tbxUser.Text == " Username")
             {
                 tbxUser.Text = "";
                 tbxUser.ForeColor = SystemColors.WindowText;
@@ -87,19 +88,28 @@ namespace LibraryProject
             String username, password;
             username = tbxUser.Text;
             password = tbxPassword.Text;
-            if (Authenticate(username, password))
+            try
             {
-                FormDashBoard mainForm = new FormDashBoard();
-                mainForm.Show();
-                this.Hide();
+                if (DangNhap(username, password))
+                {
+                    userNhanVien = NhanVienController.GetNhanVienbyId(username);
+                    FormDashBoard mainForm = new FormDashBoard();
+                    mainForm.Show();
+                    this.Hide();
+                }
+                else
+                    MessageBox.Show("Thông tin đăng nhập sai! vui lòng nhập lại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                MessageBox.Show("Thông tin đăng nhập sai! vui lòng nhập lại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void tbxPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
                 LoginHandle();
         }
 

@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\Authentication.cs" />
+    <Compile Include="Controllers\NhanVienController.cs" />
+    <Compile Include="Controllers\TaiKhoanController.cs" />
     <Compile Include="Controllers\ConnectToDB.cs" />
     <Compile Include="FormDashBoard.cs">
       <SubType>Form</SubType>
@@ -96,6 +97,12 @@
     <Compile Include="FormThongKe.Designer.cs">
       <DependentUpon>FormThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThuThu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongTinTaiKhoan.resx">
+      <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThuThu.resx">
       <DependentUpon>FormThuThu.cs</DependentUpon>
@@ -181,5 +191,6 @@
   <ItemGroup>
     <None Include="assets\padlock.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

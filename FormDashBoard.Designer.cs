@@ -29,8 +29,9 @@ namespace LibraryProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelSide = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.components = new System.ComponentModel.Container();
+            this.btnTaiKhoan = new System.Windows.Forms.Button();
+            this.pbxDashboard = new System.Windows.Forms.PictureBox();
             this.btnCaiDat = new System.Windows.Forms.Button();
             this.btnSach = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
@@ -41,39 +42,46 @@ namespace LibraryProject
             this.panelHead = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.btnTaiKhoan = new System.Windows.Forms.Button();
-            this.panelSide.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelSidebar = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelTaiKhoan = new System.Windows.Forms.Panel();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnTKInfo = new System.Windows.Forms.Button();
+            this.panelControl = new System.Windows.Forms.Panel();
+            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDashboard)).BeginInit();
             this.panelHead.SuspendLayout();
+            this.panelMain.SuspendLayout();
+            this.panelSidebar.SuspendLayout();
+            this.panelTaiKhoan.SuspendLayout();
+            this.panelControl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelSide
+            // btnTaiKhoan
             // 
-            this.panelSide.BackColor = System.Drawing.Color.DimGray;
-            this.panelSide.Controls.Add(this.btnTaiKhoan);
-            this.panelSide.Controls.Add(this.pictureBox1);
-            this.panelSide.Controls.Add(this.btnCaiDat);
-            this.panelSide.Controls.Add(this.btnSach);
-            this.panelSide.Controls.Add(this.btnThongKe);
-            this.panelSide.Controls.Add(this.btnPhieuMuon);
-            this.panelSide.Controls.Add(this.btnThuThu);
-            this.panelSide.Controls.Add(this.btnPhieuTra);
-            this.panelSide.Controls.Add(this.btnDocGia);
-            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSide.Location = new System.Drawing.Point(0, 30);
-            this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(200, 550);
-            this.panelSide.TabIndex = 0;
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.DimGray;
+            this.btnTaiKhoan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.btnTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaiKhoan.Location = new System.Drawing.Point(-13, -12);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Size = new System.Drawing.Size(222, 55);
+            this.btnTaiKhoan.TabIndex = 8;
+            this.btnTaiKhoan.Text = "Tài Khoản";
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
-            // pictureBox1
+            // pbxDashboard
             // 
-            this.pictureBox1.Image = global::LibraryProject.Properties.Resources.notebook;
-            this.pictureBox1.Location = new System.Drawing.Point(51, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.pbxDashboard.Image = global::LibraryProject.Properties.Resources.notebook;
+            this.pbxDashboard.Location = new System.Drawing.Point(3, 3);
+            this.pbxDashboard.Name = "pbxDashboard";
+            this.pbxDashboard.Size = new System.Drawing.Size(197, 115);
+            this.pbxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxDashboard.TabIndex = 7;
+            this.pbxDashboard.TabStop = false;
             // 
             // btnCaiDat
             // 
@@ -85,7 +93,7 @@ namespace LibraryProject
             this.btnCaiDat.ForeColor = System.Drawing.Color.White;
             this.btnCaiDat.Image = global::LibraryProject.Properties.Resources.settings;
             this.btnCaiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 475);
+            this.btnCaiDat.Location = new System.Drawing.Point(-1, 215);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Size = new System.Drawing.Size(200, 30);
             this.btnCaiDat.TabIndex = 6;
@@ -103,7 +111,7 @@ namespace LibraryProject
             this.btnSach.ForeColor = System.Drawing.Color.White;
             this.btnSach.Image = global::LibraryProject.Properties.Resources.open_book__1_;
             this.btnSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSach.Location = new System.Drawing.Point(0, 259);
+            this.btnSach.Location = new System.Drawing.Point(-1, -1);
             this.btnSach.Name = "btnSach";
             this.btnSach.Size = new System.Drawing.Size(200, 30);
             this.btnSach.TabIndex = 0;
@@ -121,7 +129,7 @@ namespace LibraryProject
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
             this.btnThongKe.Image = global::LibraryProject.Properties.Resources.open_book__1_;
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(0, 439);
+            this.btnThongKe.Location = new System.Drawing.Point(-1, 179);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(200, 30);
             this.btnThongKe.TabIndex = 5;
@@ -139,7 +147,7 @@ namespace LibraryProject
             this.btnPhieuMuon.ForeColor = System.Drawing.Color.White;
             this.btnPhieuMuon.Image = global::LibraryProject.Properties.Resources.open_book__1_;
             this.btnPhieuMuon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhieuMuon.Location = new System.Drawing.Point(0, 295);
+            this.btnPhieuMuon.Location = new System.Drawing.Point(-1, 35);
             this.btnPhieuMuon.Name = "btnPhieuMuon";
             this.btnPhieuMuon.Size = new System.Drawing.Size(200, 30);
             this.btnPhieuMuon.TabIndex = 1;
@@ -157,7 +165,7 @@ namespace LibraryProject
             this.btnThuThu.ForeColor = System.Drawing.Color.White;
             this.btnThuThu.Image = global::LibraryProject.Properties.Resources.librarian;
             this.btnThuThu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThuThu.Location = new System.Drawing.Point(0, 403);
+            this.btnThuThu.Location = new System.Drawing.Point(-1, 143);
             this.btnThuThu.Name = "btnThuThu";
             this.btnThuThu.Size = new System.Drawing.Size(200, 30);
             this.btnThuThu.TabIndex = 4;
@@ -175,7 +183,7 @@ namespace LibraryProject
             this.btnPhieuTra.ForeColor = System.Drawing.Color.White;
             this.btnPhieuTra.Image = global::LibraryProject.Properties.Resources.open_book__1_;
             this.btnPhieuTra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPhieuTra.Location = new System.Drawing.Point(0, 331);
+            this.btnPhieuTra.Location = new System.Drawing.Point(-1, 71);
             this.btnPhieuTra.Name = "btnPhieuTra";
             this.btnPhieuTra.Size = new System.Drawing.Size(200, 30);
             this.btnPhieuTra.TabIndex = 2;
@@ -193,7 +201,7 @@ namespace LibraryProject
             this.btnDocGia.ForeColor = System.Drawing.Color.White;
             this.btnDocGia.Image = global::LibraryProject.Properties.Resources.user;
             this.btnDocGia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDocGia.Location = new System.Drawing.Point(0, 367);
+            this.btnDocGia.Location = new System.Drawing.Point(-1, 107);
             this.btnDocGia.Name = "btnDocGia";
             this.btnDocGia.Size = new System.Drawing.Size(200, 30);
             this.btnDocGia.TabIndex = 3;
@@ -230,27 +238,89 @@ namespace LibraryProject
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.panelSidebar);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(200, 30);
+            this.panelMain.Location = new System.Drawing.Point(0, 30);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(800, 550);
+            this.panelMain.Size = new System.Drawing.Size(1000, 550);
             this.panelMain.TabIndex = 2;
             // 
-            // btnTaiKhoan
+            // panelSidebar
             // 
-            this.btnTaiKhoan.BackColor = System.Drawing.Color.DimGray;
-            this.btnTaiKhoan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaiKhoan.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.btnTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 127);
-            this.btnTaiKhoan.Name = "btnTaiKhoan";
-            this.btnTaiKhoan.Size = new System.Drawing.Size(200, 30);
-            this.btnTaiKhoan.TabIndex = 8;
-            this.btnTaiKhoan.Text = "Tài Khoản";
-            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            this.panelSidebar.BackColor = System.Drawing.Color.DimGray;
+            this.panelSidebar.Controls.Add(this.pbxDashboard);
+            this.panelSidebar.Controls.Add(this.panelTaiKhoan);
+            this.panelSidebar.Controls.Add(this.panelControl);
+            this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSidebar.Location = new System.Drawing.Point(0, 0);
+            this.panelSidebar.Name = "panelSidebar";
+            this.panelSidebar.Size = new System.Drawing.Size(200, 550);
+            this.panelSidebar.TabIndex = 11;
+            // 
+            // panelTaiKhoan
+            // 
+            this.panelTaiKhoan.Controls.Add(this.btnDangXuat);
+            this.panelTaiKhoan.Controls.Add(this.btnTKInfo);
+            this.panelTaiKhoan.Controls.Add(this.btnTaiKhoan);
+            this.panelTaiKhoan.Location = new System.Drawing.Point(3, 124);
+            this.panelTaiKhoan.MaximumSize = new System.Drawing.Size(200, 90);
+            this.panelTaiKhoan.MinimumSize = new System.Drawing.Size(200, 30);
+            this.panelTaiKhoan.Name = "panelTaiKhoan";
+            this.panelTaiKhoan.Size = new System.Drawing.Size(200, 30);
+            this.panelTaiKhoan.TabIndex = 9;
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.BackColor = System.Drawing.Color.Gray;
+            this.btnDangXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.Location = new System.Drawing.Point(1, 59);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(194, 30);
+            this.btnDangXuat.TabIndex = 10;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnTKInfo
+            // 
+            this.btnTKInfo.BackColor = System.Drawing.Color.Gray;
+            this.btnTKInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTKInfo.FlatAppearance.BorderSize = 0;
+            this.btnTKInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTKInfo.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTKInfo.ForeColor = System.Drawing.Color.White;
+            this.btnTKInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTKInfo.Location = new System.Drawing.Point(1, 30);
+            this.btnTKInfo.Name = "btnTKInfo";
+            this.btnTKInfo.Size = new System.Drawing.Size(194, 30);
+            this.btnTKInfo.TabIndex = 9;
+            this.btnTKInfo.Text = "Thông Tin Tài Khoản";
+            this.btnTKInfo.UseVisualStyleBackColor = false;
+            this.btnTKInfo.Click += new System.EventHandler(this.btnTKInfo_Click);
+            // 
+            // panelControl
+            // 
+            this.panelControl.Controls.Add(this.btnSach);
+            this.panelControl.Controls.Add(this.btnCaiDat);
+            this.panelControl.Controls.Add(this.btnPhieuMuon);
+            this.panelControl.Controls.Add(this.btnDocGia);
+            this.panelControl.Controls.Add(this.btnThuThu);
+            this.panelControl.Controls.Add(this.btnPhieuTra);
+            this.panelControl.Controls.Add(this.btnThongKe);
+            this.panelControl.Location = new System.Drawing.Point(3, 160);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(200, 246);
+            this.panelControl.TabIndex = 10;
+            // 
+            // sidebarTimer
+            // 
+            this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
             // FormDashBoard
             // 
@@ -259,21 +329,22 @@ namespace LibraryProject
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1000, 580);
             this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panelSide);
             this.Controls.Add(this.panelHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDashBoard";
             this.Text = "Form1";
-            this.panelSide.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.FormDashBoard_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDashboard)).EndInit();
             this.panelHead.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
+            this.panelSidebar.ResumeLayout(false);
+            this.panelTaiKhoan.ResumeLayout(false);
+            this.panelControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelSide;
         private System.Windows.Forms.Panel panelHead;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button btnSach;
@@ -283,9 +354,15 @@ namespace LibraryProject
         private System.Windows.Forms.Button btnPhieuMuon;
         private System.Windows.Forms.Button btnCaiDat;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxDashboard;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnTaiKhoan;
+        private System.Windows.Forms.Panel panelTaiKhoan;
+        private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Button btnTKInfo;
+        private System.Windows.Forms.Timer sidebarTimer;
+        private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.FlowLayoutPanel panelSidebar;
     }
 }
 

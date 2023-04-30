@@ -12,6 +12,7 @@ namespace LibraryProject
 {
     public partial class FormDashBoard : Form
     {
+        bool sidebarExpand = false;
         public FormDashBoard()
         {
             InitializeComponent();
@@ -67,6 +68,60 @@ namespace LibraryProject
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                panelTaiKhoan.Height -= 10;
+                if (panelTaiKhoan.Height == panelTaiKhoan.MinimumSize.Height)
+                {
+                    sidebarExpand = false;
+                    sidebarTimer.Stop();
+                }
+            }
+            else
+            {
+                panelTaiKhoan.Height += 10;
+                if (panelTaiKhoan.Height == panelTaiKhoan.MaximumSize.Height)
+                {
+                    sidebarExpand = true;
+                    sidebarTimer.Stop();
+                }
+            }
+        }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            sidebarTimer.Start();
+        }
+
+        private void btnTKInfo_Click(object sender, EventArgs e)
+        {
+            loadForm(new FormThongTinTaiKhoan());
+        }
+
+        private void FormDashBoard_Load(object sender, EventArgs e)
+        {
+            btnTaiKhoan.Text = Controllers.TaiKhoanController.userNhanVien.Rows[0][0].ToString();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Bạn Có Muốn Đăng Xuất Không?",
+                                        "Cảnh Báo Đăng Xuất",
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Warning);
+            if (confirmResult == DialogResult.Yes)
+            {
+                // If 'Yes', do something here.
+                Controllers.TaiKhoanController.DangXuat();
+            }
+            else
+            {
+                // If 'No', do something here.
+            }
         }
     }
 }
