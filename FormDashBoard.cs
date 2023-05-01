@@ -14,60 +14,61 @@ namespace LibraryProject
     public partial class FormDashBoard : Form
     {
         bool sidebarExpand = false;
+
+        private string helloText { set => btnTaiKhoan.Text = "Hello, " + value; }
+
         public FormDashBoard()
         {
             InitializeComponent();
         }
 
-        public void loadForm(object Form)
+        void child_DataAvailable(object sender, EventArgs e)
         {
-            Form f = Form as Form;
-            if (this.panelMain.Controls.Count > 0)
-                this.panelMain.Controls.RemoveAt(0);
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.panelMain.Controls.Add(f);
-            this.panelMain.Tag = f;
-            f.Show();
+            FormThongTinTaiKhoan child = sender as FormThongTinTaiKhoan;
+            if (child != null)
+            {
+                helloText = child.Data;
+            }
         }
 
         private void btnSach_Click(object sender, EventArgs e)
         {
-            loadForm(new FormSach());
+            FormBUS.Instance.loadForm(this.panelMain, new FormSach());
         }
 
         private void btnPhieuMuon_Click(object sender, EventArgs e)
         {
-            loadForm(new FormPhieuMuon());
+            FormBUS.Instance.loadForm(this.panelMain, new FormPhieuMuon());
         }
 
         private void btnPhieuTra_Click(object sender, EventArgs e)
         {
-            loadForm(new FormPhieuTra());
+            FormBUS.Instance.loadForm(this.panelMain, new FormPhieuTra());
         }
 
         private void btnDocGia_Click(object sender, EventArgs e)
         {
-            loadForm(new FormDocGia());
+            FormBUS.Instance.loadForm(this.panelMain, new FormDocGia());
         }
 
         private void btnThuThu_Click(object sender, EventArgs e)
         {
-            loadForm(new FormThuThu());
+            FormBUS.Instance.loadForm(this.panelMain, new FormThuThu());
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            loadForm(new FormThongKe());
+            FormBUS.Instance.loadForm(this.panelMain, new FormThongKe());
         }
 
         private void btnCaiDat_Click(object sender, EventArgs e)
         {
-            loadForm(new FormCaiDat());
+            FormBUS.Instance.loadForm(this.panelMain, new FormCaiDat());
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            TaiKhoanBUS.DangXuat();
             Application.Exit();
         }
 
@@ -100,13 +101,15 @@ namespace LibraryProject
 
         private void btnTKInfo_Click(object sender, EventArgs e)
         {
-            loadForm(new FormThongTinTaiKhoan());
+            FormThongTinTaiKhoan formThongTinTaiKhoan = new FormThongTinTaiKhoan();
+            formThongTinTaiKhoan.DataAvailable += new EventHandler(child_DataAvailable);
+            FormBUS.Instance.loadForm(this.panelMain, formThongTinTaiKhoan);
         }
 
         private void FormDashBoard_Load(object sender, EventArgs e)
         {
-            btnTaiKhoan.Text = "Hello, " + NhanVienBUS.currentNhanVien.TenNhanVien;
-            loadForm(new FormSach());
+            helloText = NhanVienBUS.currentNhanVien.TenNhanVien;
+            FormBUS.Instance.loadForm(this.panelMain, new FormSach());
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

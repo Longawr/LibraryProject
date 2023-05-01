@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LibraryProject.BUS
 {
@@ -28,12 +29,6 @@ namespace LibraryProject.BUS
 
         private NhanVienBUS() { }
 
-        //public DataTable GetNhanVienbyId(string id)
-        //{
-        //    return NhanVienDAO.Instance.GetNhanVienbyId(id);
-
-        //}
-
         internal void AddCurrentNhanVien(string id)
         {
             DataTable dtable = NhanVienDAO.Instance.GetNhanVienbyId(id);
@@ -46,6 +41,22 @@ namespace LibraryProject.BUS
                 currentNhanVien.GioiTinh = dRow[0] != null ? dRow[3].ToString() : "";
                 currentNhanVien.DiaChi = dRow[0] != null ? dRow[4].ToString() : "";
             }
+        }
+
+        public bool SuaCurrentNhanVien(string maNV, string tenNV, string email, string gioiTinh, string diaChi)
+        {
+            NhanVienDTO nhanVien = new NhanVienDTO();
+            nhanVien.MaNhanVien = currentNhanVien.MaNhanVien;
+            nhanVien.TenNhanVien = tenNV;
+            nhanVien.Email = email;
+            nhanVien.GioiTinh = gioiTinh;
+            nhanVien.DiaChi = diaChi;
+            if (NhanVienDAO.Instance.SuaNhanVien(maNV, nhanVien))
+            {
+                currentNhanVien = nhanVien;
+                return true;
+            }
+            return false;
         }
     }
 }

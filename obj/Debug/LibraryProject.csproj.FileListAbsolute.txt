@@ -17,3 +17,4 @@ D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.pdb
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormLogin.resources
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDocGia.resources
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormThongTinTaiKhoan.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDoiMK.resources
