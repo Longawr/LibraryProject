@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace LibraryProject.Controllers
+namespace LibraryProject.DAO
 {
     class DataProvider
     {

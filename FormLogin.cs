@@ -1,4 +1,4 @@
-﻿using LibraryProject.Controllers;
+﻿using LibraryProject.BUS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static LibraryProject.Controllers.TaiKhoanController;
 
 namespace LibraryProject
 {
     public partial class FormLogin : Form
     {
+        private const string defaultUsernameText = " Username";
+        private const string defaultPasswordText = " Password";
         public FormLogin()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace LibraryProject
         {
             panelUser.BackColor = Color.White;
             tbxUser.BackColor = Color.White;
-            if (tbxUser.Text == " Username")
+            if (tbxUser.Text == defaultUsernameText)
             {
                 tbxUser.Text = "";
                 tbxUser.ForeColor = SystemColors.WindowText;
@@ -41,7 +42,7 @@ namespace LibraryProject
             tbxUser.BackColor = SystemColors.Control;
             if (tbxUser.Text == "")
             {
-                tbxUser.Text = " Username";
+                tbxUser.Text = defaultUsernameText;
                 tbxUser.ForeColor = Color.DimGray;
             }
         }
@@ -50,7 +51,7 @@ namespace LibraryProject
         {
             panelPassword.BackColor = Color.White;
             tbxPassword.BackColor = Color.White;
-            if (tbxPassword.Text == " Password")
+            if (tbxPassword.Text == defaultPasswordText)
             {
                 tbxPassword.Text = "";
                 tbxPassword.ForeColor = SystemColors.WindowText;
@@ -63,7 +64,7 @@ namespace LibraryProject
             tbxPassword.BackColor = SystemColors.Control;
             if (tbxPassword.Text == "")
             {
-                tbxPassword.Text = " Password";
+                tbxPassword.Text = defaultPasswordText;
                 tbxPassword.ForeColor = Color.DimGray;
             }
         }
@@ -75,14 +76,23 @@ namespace LibraryProject
 
         private void btbLogin_Click(object sender, EventArgs e)
         {
-            String username, password;
-            username = tbxUser.Text;
-            password = tbxPassword.Text;
+            if (tbxUser.Text == defaultUsernameText || tbxPassword.Text == defaultPasswordText)
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin đăng nhập", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (tbxUser.Text[0] == ' ' || tbxPassword.Text[0] == ' ')
+            {
+                MessageBox.Show("Thông tin đăng nhập không thể bắt đầu bằng phím cách (space key)", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
-                if (DangNhap(username, password))
+                if (TaiKhoanBUS.Instance.DangNhap(tbxUser.Text, tbxPassword.Text))
                 {
-                    userNhanVien = NhanVienController.GetNhanVienbyId(username);
+                    NhanVienBUS.Instance.AddCurrentNhanVien(tbxUser.Text);
                     FormDashBoard mainForm = new FormDashBoard();
                     mainForm.Show();
                     this.Hide();
@@ -93,7 +103,6 @@ namespace LibraryProject
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 

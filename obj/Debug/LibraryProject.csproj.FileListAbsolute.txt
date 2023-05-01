@@ -17,6 +17,7 @@ D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.pdb
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormLogin.resources
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDocGia.resources
 D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormThongTinTaiKhoan.resources
+<<<<<<< HEAD
 C:\Users\ChauCC\Downloads\LibraryProject\bin\Debug\LibraryProject.exe.config
 C:\Users\ChauCC\Downloads\LibraryProject\bin\Debug\LibraryProject.exe
 C:\Users\ChauCC\Downloads\LibraryProject\bin\Debug\LibraryProject.pdb
@@ -37,3 +38,6 @@ C:\Users\ChauCC\Downloads\LibraryProject\obj\Debug\LibraryProject.csproj.Generat
 C:\Users\ChauCC\Downloads\LibraryProject\obj\Debug\LibraryProject.csproj.CoreCompileInputs.cache
 C:\Users\ChauCC\Downloads\LibraryProject\obj\Debug\LibraryProject.exe
 C:\Users\ChauCC\Downloads\LibraryProject\obj\Debug\LibraryProject.pdb
+=======
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDoiMK.resources
+>>>>>>> a4f0485bd219b74ba8e658d98fb620ddcc3f5062
