@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryProject.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -104,7 +105,7 @@ namespace LibraryProject
 
         private void FormDashBoard_Load(object sender, EventArgs e)
         {
-            btnTaiKhoan.Text = "Hello, " + Controllers.TaiKhoanController.userNhanVien.Rows[0][0].ToString();
+            btnTaiKhoan.Text = "Hello, " + NhanVienBUS.currentNhanVien.TenNhanVien;
             loadForm(new FormSach());
         }
 
@@ -116,15 +117,10 @@ namespace LibraryProject
                                         MessageBoxIcon.Warning);
             if (confirmResult == DialogResult.Yes)
             {
-                // If 'Yes', do something here.
-                Controllers.TaiKhoanController.DangXuat();
+                TaiKhoanBUS.DangXuat();
                 FormLogin loginform = new FormLogin();
                 loginform.Show();
                 this.Hide();
-            }
-            else
-            {
-                // If 'No', do something here.
             }
         }
     }

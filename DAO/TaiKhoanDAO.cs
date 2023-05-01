@@ -1,18 +1,32 @@
-﻿using System;
+﻿using LibraryProject.BUS;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static LibraryProject.Controllers.DataProvider;
 
-namespace LibraryProject.Controllers
+namespace LibraryProject.DAO
 {
-    class TaiKhoanController
+    class TaiKhoanDAO
     {
-        public static DataTable userNhanVien;
-        public static bool DangNhap(String uname, String upass)
+        private static TaiKhoanDAO instance;
+
+        public static TaiKhoanDAO Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new TaiKhoanDAO();
+                return instance;
+            }
+            //set => instance = value; 
+        }
+
+        private TaiKhoanDAO() { }
+
+        public bool DangNhap(String uname, String upass)
         {
             try
             {
@@ -29,10 +43,6 @@ namespace LibraryProject.Controllers
             }
         }
 
-        public static bool DangXuat()
-        {
-            userNhanVien = null;
-            return true;
-        }
+        public void DangXuat() { }
     }
 }

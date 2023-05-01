@@ -5,13 +5,27 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static LibraryProject.Controllers.DataProvider;
 
-namespace LibraryProject.Controllers
+namespace LibraryProject.DAO
 {
-    class NhanVienController
+    class NhanVienDAO
     {
-        public static DataTable GetNhanVienbyId(String id)
+        private static NhanVienDAO instance;
+
+        public static NhanVienDAO Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new NhanVienDAO();
+                return instance;
+            }
+            //set => instance = value; 
+        }
+
+        private NhanVienDAO() { }
+
+        public DataTable GetNhanVienbyId(String id)
         {
             try
             {
