@@ -7,7 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace LibraryProject.DAO
 {
@@ -41,12 +41,25 @@ namespace LibraryProject.DAO
             }
         }
 
+        public DataTable TheLoai()
+        {
+            try
+            {
+                string sql = "select * from LoaiSach";
+                return DataProvider.Instance.ExecuteQuery(sql);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public DataTable TimKiemTheoTen(string TenSach)
         {
             try
             {
-                object[] pmt = new object[] { TenSach };
-                string sql = "select * from Sach where TenSach like @TenSach ";
+                object[] pmt = new object[] { TenSach};
+                string sql = "select * from Sach where TenSach like @TenSach";
                     
                 return DataProvider.Instance.ExecuteQuery(sql, pmt);
             }
@@ -54,9 +67,23 @@ namespace LibraryProject.DAO
             {
                 throw ex;
             }
-            
+        }
+        public DataTable LocSach(string MaLoai)
+        {
+            try
+            {
+                object[] pmt = new object[] { MaLoai };
+                string sql = "select Sach.* from Sach, LoaiSach where Sach.MaLoai like LoaiSach.MaLoai and LoaiSach.MaLoai = @MaLoai";
+
+                return DataProvider.Instance.ExecuteQuery(sql,pmt);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
+        
         public bool Xoa(string TenSach)
         {
             try

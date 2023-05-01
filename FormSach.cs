@@ -1,4 +1,5 @@
 ﻿using LibraryProject.BUS;
+using LibraryProject.Controllers;
 using LibraryProject.DAO;
 using System;
 using System.CodeDom.Compiler;
@@ -20,40 +21,42 @@ namespace LibraryProject
             InitializeComponent();
         }
         
-
-
-
         private void FormSach_Load(object sender, EventArgs e)
         {
-            SachBUS.Instance.Xem(dataGridView1);
-            
+            SachBUS.Instance.Xem(dgvSach);
+            cBxTheLoai.DataSource = SachDAO.Instance.TheLoai();
+            cBxTheLoai.DisplayMember = "MaLoai";
+           
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            SachBUS.Instance.TimKiemTheoTen(dataGridView1, tBxTenSach.Text);
+            SachBUS.Instance.TimKiemTheoTen(dgvSach, tBxTenSach.Text);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            SachBUS.Instance.Xem(dataGridView1);
+            SachBUS.Instance.Xem(dgvSach);
+           
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (SachBUS.Instance.Xoa(dataGridView1))
-            {
-                MessageBox.Show("Xoa Thanh Cong");
-                btnRefresh_Click(sender, e);
-            } else
-                MessageBox.Show("Xoa khong Thanh Cong");
+        if (SachBUS.Instance.Xoa(dgvSach))
+        {
+            MessageBox.Show("Xoa Thanh Cong");
+            btnRefresh_Click(sender, e);
         }
+        else
+            MessageBox.Show("Xoa khong Thanh Cong");
+        }
+
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (SachBUS.Instance.Sua(dataGridView1))
+            if (SachBUS.Instance.Sua(dgvSach))
             {
                 MessageBox.Show("Sua Thanh Cong");
-                //btnRefresh_Click(sender,e);
+                btnRefresh_Click(sender,e);
             }
             else
                 MessageBox.Show("Sua khong Thanh Cong");
@@ -61,7 +64,7 @@ namespace LibraryProject
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (SachBUS.Instance.Them(dataGridView1))
+            if (SachBUS.Instance.Them(dgvSach))
             {
                 MessageBox.Show("Them Thanh Cong");
                 btnRefresh_Click(sender, e);
@@ -70,5 +73,12 @@ namespace LibraryProject
                 MessageBox.Show("Them khong Thanh Cong");
         }
 
-    } 
+        private void btnLoc_Click(object sender, EventArgs e)
+        {
+            SachBUS.Instance.LocSach(dgvSach,cBxTheLoai.Text);
+            dgvSach.DataSource = SachDAO.Instance.LocSach(cBxTheLoai.Text);
+        }
+
+    }
+        
 }

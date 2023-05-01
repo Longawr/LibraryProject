@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryProject.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,13 @@ namespace LibraryProject
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void FormPhieuMuon_Load(object sender, EventArgs e)
+        {
+
+            PhieuMuonBUS.Instance.XemPhieuMuon(dgvPhieuMuon);
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
 
         }

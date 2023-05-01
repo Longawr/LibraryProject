@@ -13,6 +13,7 @@ namespace LibraryProject.BUS
 {
     class SachBUS
     {
+        
         private static SachBUS instance;
         public static SachBUS Instance
         {
@@ -31,9 +32,19 @@ namespace LibraryProject.BUS
             data.DataSource = SachDAO.Instance.Xem();
         }
 
+        public void TheLoai(DataGridView data)
+        {
+            data.DataSource = SachDAO.Instance.TheLoai();
+        }
+
         public void TimKiemTheoTen(DataGridView data, string TenSach)
         {
             data.DataSource = SachDAO.Instance.TimKiemTheoTen(TenSach);
+        }
+
+        public void LocSach(DataGridView data, string MaLoai)
+        {
+            data.DataSource = SachDAO.Instance.LocSach(MaLoai);
         }
 
         public bool Xoa(DataGridView data)
@@ -101,5 +112,6 @@ namespace LibraryProject.BUS
 
             return SachDAO.Instance.Them(sach);
         }
+
     }
 }
