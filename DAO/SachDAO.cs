@@ -129,13 +129,13 @@ namespace LibraryProject.DAO
                 throw ex;
             }
         }
-
+        // Chua đung
         public bool Them(SachDTO sach)
         {
             try
             {
-                string sql = "insert into Sach values( @MaSach , " +
-                "@TenSach , " +
+                string sql = "insert into MuonTraSach values( @MaPhieu , " +
+                "@MaSV , " +
                 "@MaTacGia , " +
                "@MaXB , " +
                "@MaLoai , " +
