@@ -1,4 +1,5 @@
 ﻿using LibraryProject.BUS;
+using LibraryProject.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -41,7 +42,41 @@ namespace LibraryProject.DAO
 
             return DataProvider.Instance.ExecuteNonQuery(query, obj);
         }
+        public bool TaoTaiKhoanMoi(TaiKhoanDTO taiKhoan)
+        {
+            try
+            {
+                string sql = "insert into TaiKhoan values ( @TaiKhoan , @MatKhau , @Chucvu )";
+                object[] pmt = new object[] { taiKhoan.TaiKhoan, taiKhoan.MatKhau, taiKhoan.ChucVu };
+                if (DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0)
+                {
+                    return true;
+                }
 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return false;
+        }
+        public bool Xoa(string MaThuThu)
+        {
+            try
+            {
+                string sql = "delete from TaiKhoan where TaiKhoan = @MaThuThu";
+                object[] pmt = new object[] { MaThuThu };
+                if (DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public void DangXuat() { }
     }
 }

@@ -58,6 +58,7 @@
     <Compile Include="BUS\TaiKhoanBUS.cs" />
     <Compile Include="BUS\TheLoaiBUS.cs" />
     <Compile Include="BUS\ThongKeBUS.cs" />
+    <Compile Include="BUS\ThuThuBUS.cs" />
     <Compile Include="ChartMuon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +75,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\TheLoaiDAO.cs" />
     <Compile Include="DAO\ThongKeDAO.cs" />
+    <Compile Include="DAO\ThuThuDAO.cs" />
     <Compile Include="DTO\ChiTietPMDTO.cs" />
     <Compile Include="DTO\DocGiaDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
@@ -81,6 +83,7 @@
     <Compile Include="DTO\PhieuTraDTO.cs" />
     <Compile Include="DTO\SachDTO.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
+    <Compile Include="DTO\ThuThuDTO.cs" />
     <Compile Include="FormDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +132,12 @@
     <Compile Include="FormSach.Designer.cs">
       <DependentUpon>FormSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTaoTaiKhoan.Designer.cs">
+      <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSach.resx">
       <DependentUpon>FormSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTaoTaiKhoan.resx">
+      <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
