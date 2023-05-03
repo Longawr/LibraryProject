@@ -1,23 +1,3 @@
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.csproj.AssemblyReference.cache
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDashBoard.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormCaiDat.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDocGia.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDoiMK.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormLogin.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormPhieuTra.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormSach.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormThongKe.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormThongTinTaiKhoan.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormThuThu.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.Properties.Resources.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.csproj.GenerateResource.cache
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.csproj.CoreCompileInputs.cache
-D:\projects\cs\LibraryProject\bin\Debug\LibraryProject.exe.config
-D:\projects\cs\LibraryProject\bin\Debug\LibraryProject.exe
-D:\projects\cs\LibraryProject\bin\Debug\LibraryProject.pdb
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormPhieuMuon.resources
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.exe
-D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.pdb
 D:\Source\LibraryProject\obj\Debug\LibraryProject.csproj.AssemblyReference.cache
 D:\Source\LibraryProject\obj\Debug\LibraryProject.exe
 D:\Source\LibraryProject\obj\Debug\LibraryProject.pdb
@@ -59,3 +39,23 @@ D:\New folder (3)\LibraryProject\obj\Debug\LibraryProject.csproj.GenerateResourc
 D:\New folder (3)\LibraryProject\obj\Debug\LibraryProject.csproj.CoreCompileInputs.cache
 D:\New folder (3)\LibraryProject\obj\Debug\LibraryProject.exe
 D:\New folder (3)\LibraryProject\obj\Debug\LibraryProject.pdb
+D:\projects\cs\LibraryProject\bin\Debug\LibraryProject.exe.config
+D:\projects\cs\LibraryProject\bin\Debug\LibraryProject.exe
+D:\projects\cs\LibraryProject\bin\Debug\LibraryProject.pdb
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.csproj.AssemblyReference.cache
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDashBoard.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormCaiDat.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDocGia.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormDoiMK.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormLogin.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormPhieuMuon.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormPhieuTra.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormSach.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormThongKe.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormThongTinTaiKhoan.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormThuThu.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.Properties.Resources.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.csproj.GenerateResource.cache
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.csproj.CoreCompileInputs.cache
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.exe
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.pdb

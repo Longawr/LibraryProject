@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryProject
+namespace LibraryProject.DTO
 {
-     class DGDTO
+     class DocGiaDTO
     {
         private string maDG;
         public string MaDG

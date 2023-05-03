@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LibraryProject.DAO;
+using LibraryProject.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -6,33 +8,35 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LibraryProject
+namespace LibraryProject.BUS
 {
-    class DGBus
+    class DocGiaBUS
     {
-        private static DGBus instance;
-        public static DGBus Instance
+        private static DocGiaBUS instance;
+        public static DocGiaBUS Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new DGBus();
+                    instance = new DocGiaBUS();
                 }
                 return instance;
             }
             //set { instance = value; }
         }
-        private DGBus() { }
+        private DocGiaBUS() { }
         public void Xem(DataGridView data)
         {
-            data.DataSource = DGDao.Instance.Xem();
+            data.DataSource = DocGiaDAO.Instance.Xem();
+            data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            DataProducer.Instance.TaoSearchCol(data);
         }
         public bool XoatheoMaDG(DataGridView data)
         {
             string MaDG = data.SelectedCells[0].OwningRow.Cells["Mã độc giả"].Value.ToString();
 
-            return DGDao.Instance.XoatheoMaDG(MaDG);
+            return DocGiaDAO.Instance.XoatheoMaDG(MaDG);
 
         }
         public bool Sua(DataGridView data)
@@ -49,10 +53,10 @@ namespace LibraryProject
             string email = row.Cells["Email"].Value.ToString();
 
 
-            DGDTO Docgia = new DGDTO() { MaDG = maDG, TenDG = tenDG, NgaySinh = ngaySinh, DiaChi = diaChi, GioiTinh = gioiTinh, SDT = sDT, Email = email };
+            DocGiaDTO Docgia = new DocGiaDTO() { MaDG = maDG, TenDG = tenDG, NgaySinh = ngaySinh, DiaChi = diaChi, GioiTinh = gioiTinh, SDT = sDT, Email = email };
 
 
-            return DGDao.Instance.Sua(oldMaDG, Docgia);
+            return DocGiaDAO.Instance.Sua(oldMaDG, Docgia);
         }
         public bool Them(DataGridView data)
         {
@@ -64,26 +68,26 @@ namespace LibraryProject
             DateTime ngaySinh = new DateTime(1900, 1, 1);
             try
             {
-               ngaySinh = ((DateTime)row.Cells["Ngày sinh"].Value);
+                ngaySinh = ((DateTime)row.Cells["Ngày sinh"].Value);
             }
-              catch { }  
-                
+            catch { }
+
             string diaChi = row.Cells["Địa chỉ"].Value.ToString();
             bool gioiTinh = false;
             try
             {
 
-               gioiTinh =  (bool)row.Cells["Giới tính"].Value;
+                gioiTinh = (bool)row.Cells["Giới tính"].Value;
             }
             catch { }
-            
+
             string sDT = row.Cells["SĐT"].Value.ToString();
             string email = row.Cells["Email"].Value.ToString();
-            
-            DGDTO docGia = new DGDTO() { MaDG = maDG, TenDG = tenDG, NgaySinh = ngaySinh, DiaChi = diaChi, GioiTinh = gioiTinh, SDT = sDT, Email = email };
+
+            DocGiaDTO docGia = new DocGiaDTO() { MaDG = maDG, TenDG = tenDG, NgaySinh = ngaySinh, DiaChi = diaChi, GioiTinh = gioiTinh, SDT = sDT, Email = email };
 
 
-            return DGDao.Instance.Them(docGia);
+            return DocGiaDAO.Instance.Them(docGia);
         }
     }
 }

@@ -88,7 +88,6 @@ namespace LibraryProject
             this.dataMain.RowTemplate.Height = 24;
             this.dataMain.Size = new System.Drawing.Size(800, 446);
             this.dataMain.TabIndex = 0;
-            this.dataMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataMain_CellContentClick);
             // 
             // panelFoot
             // 
@@ -109,9 +108,9 @@ namespace LibraryProject
             // 
             this.btnXem.BackColor = System.Drawing.Color.White;
             this.btnXem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXem.Location = new System.Drawing.Point(12, 12);
+            this.btnXem.Location = new System.Drawing.Point(12, 9);
             this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(75, 25);
+            this.btnXem.Size = new System.Drawing.Size(75, 29);
             this.btnXem.TabIndex = 6;
             this.btnXem.Text = "Refresh";
             this.btnXem.UseVisualStyleBackColor = false;
@@ -121,9 +120,9 @@ namespace LibraryProject
             // 
             this.btnSua.BackColor = System.Drawing.Color.White;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Location = new System.Drawing.Point(710, 12);
+            this.btnSua.Location = new System.Drawing.Point(691, 9);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 25);
+            this.btnSua.Size = new System.Drawing.Size(75, 29);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -133,9 +132,9 @@ namespace LibraryProject
             // 
             this.btnXoa.BackColor = System.Drawing.Color.White;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Location = new System.Drawing.Point(600, 12);
+            this.btnXoa.Location = new System.Drawing.Point(587, 9);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 25);
+            this.btnXoa.Size = new System.Drawing.Size(75, 29);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -145,9 +144,9 @@ namespace LibraryProject
             // 
             this.btnTim.BackColor = System.Drawing.Color.White;
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTim.Location = new System.Drawing.Point(347, 12);
+            this.btnTim.Location = new System.Drawing.Point(372, 9);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 25);
+            this.btnTim.Size = new System.Drawing.Size(75, 29);
             this.btnTim.TabIndex = 3;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = false;
@@ -157,9 +156,9 @@ namespace LibraryProject
             // 
             this.btnThem.BackColor = System.Drawing.Color.White;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Location = new System.Drawing.Point(483, 13);
+            this.btnThem.Location = new System.Drawing.Point(479, 10);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 25);
+            this.btnThem.Size = new System.Drawing.Size(75, 27);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -171,7 +170,7 @@ namespace LibraryProject
             this.tbxSearch.ForeColor = System.Drawing.Color.DimGray;
             this.tbxSearch.Location = new System.Drawing.Point(110, 10);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(210, 28);
+            this.tbxSearch.Size = new System.Drawing.Size(237, 28);
             this.tbxSearch.TabIndex = 1;
             // 
             // FormDocGia

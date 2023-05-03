@@ -20,26 +20,16 @@ namespace LibraryProject
             InitializeComponent();
         }
 
-        string connectionString = @"Data Source=SHINN;Initial Catalog=DB_LIBRARY1;Integrated Security=True";
         private void btnTim_Click(object sender, EventArgs e)
         {
-
-            string query = "SELECT MaDG AS N'Mã độc giả', TenDG AS N'Tên độc giả', NgaySinh AS N'Ngày sinh', GioiTinh AS N'Giới tính', DiaChi AS N'Địa chỉ', SDT AS N'SĐT', Email AS N'Email' FROM dbo.DOCGIA Where MaDG like @MaDG";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@MaDG", tbxSearch.Text);
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            dataMain.DataSource = table;                     
-            connection.Close();
+            btnXem_Click(sender, e);
+            DataProducer.Instance.TimKiemTrenDGV(dataMain, tbxSearch.Text);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
 
-            if (DGBus.Instance.Them(dataMain))
+            if (DocGiaBUS.Instance.Them(dataMain))
             {
                 MessageBox.Show("Thêm thành công!");
                 btnXem_Click(sender, e);
@@ -53,7 +43,7 @@ namespace LibraryProject
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (DGBus.Instance.XoatheoMaDG(dataMain))
+            if (DocGiaBUS.Instance.XoatheoMaDG(dataMain))
             {
                 MessageBox.Show("Xóa thành công!");
                 btnXem_Click(sender, e);
@@ -62,14 +52,14 @@ namespace LibraryProject
             else
             {
                 MessageBox.Show("Xóa không thành công");
-            } 
-                
+            }
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
 
-            if (DGBus.Instance.Sua(dataMain))
+            if (DocGiaBUS.Instance.Sua(dataMain))
             {
                 MessageBox.Show("Sửa thành công!");
                 btnXem_Click(sender, e);
@@ -81,15 +71,10 @@ namespace LibraryProject
             }
         }
 
-        private void dataMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-       
         private void btnXem_Click(object sender, EventArgs e)
         {
-            
-            DGBus.Instance.Xem(dataMain);   
+
+            DocGiaBUS.Instance.Xem(dataMain);
 
         }
 
