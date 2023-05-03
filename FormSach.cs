@@ -20,16 +20,16 @@ namespace LibraryProject
         {
             InitializeComponent();
         }
-
+        
         private void FormSach_Load(object sender, EventArgs e)
         {
             SachBUS.Instance.Xem(dgvSach);
-            TheLoaiBUS.Instance.GetTheLoai(cBxTheLoai);
+            cBxTheLoai.DataSource = TheLoaiDAO.Instance.GetTheLoai();
             cBxTheLoai.DisplayMember = "TenLoai";
             cBxTheLoai.ValueMember = "MaLoai";
 
             dgvSach.Columns[0].HeaderText = "Mã sách";
-            dgvSach.Columns[0].Width = 60;
+            dgvSach.Columns[0].Width= 60;
             dgvSach.Columns[1].HeaderText = "Tên sách";
             dgvSach.Columns[1].Width = 160;
             dgvSach.Columns[2].HeaderText = "Số lượng";
@@ -56,18 +56,18 @@ namespace LibraryProject
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             SachBUS.Instance.Xem(dgvSach);
-
+           
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (SachBUS.Instance.Xoa(dgvSach))
-            {
-                MessageBox.Show("Xoa Thanh Cong");
-                btnRefresh_Click(sender, e);
-            }
-            else
-                MessageBox.Show("Xoa khong Thanh Cong");
+        if (SachBUS.Instance.Xoa(dgvSach))
+        {
+            MessageBox.Show("Xoa Thanh Cong");
+            btnRefresh_Click(sender, e);
+        }
+        else
+            MessageBox.Show("Xoa khong Thanh Cong");
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -75,10 +75,10 @@ namespace LibraryProject
             if (SachBUS.Instance.Sua(dgvSach))
             {
                 MessageBox.Show("Sua Thanh Cong");
-                btnRefresh_Click(sender, e);
+                btnRefresh_Click(sender,e);
             }
             else
-                _ = MessageBox.Show("Sua khong Thanh Cong");
+                MessageBox.Show("Sua khong Thanh Cong");
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -92,13 +92,13 @@ namespace LibraryProject
                 MessageBox.Show("Them khong Thanh Cong");
         }
 
-        private void btnLoc_Click(object sender, EventArgs e)
+       private void btnLoc_Click(object sender, EventArgs e)
         {
             string MaLoai = cBxTheLoai.SelectedValue.ToString();
             SachBUS.Instance.LocSach(dgvSach, MaLoai);
         }
 
-
+        
     }
-
+        
 }
