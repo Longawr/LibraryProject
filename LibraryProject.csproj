@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BUS\ChiTietPMBUS.cs" />
     <Compile Include="BUS\DataProducer.cs" />
+    <Compile Include="BUS\DGBus.cs" />
     <Compile Include="BUS\FormBUS.cs" />
     <Compile Include="BUS\NhanVienBUS.cs" />
     <Compile Include="BUS\PhieuMuonBUS.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="BUS\TaiKhoanBUS.cs" />
     <Compile Include="BUS\TheLoaiBUS.cs" />
     <Compile Include="DAO\ChiTietPMDAO.cs" />
+    <Compile Include="DAO\DGDao.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\PhieuMuonDAO.cs" />
     <Compile Include="DAO\PhieuTraDAO.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\TheLoaiDAO.cs" />
     <Compile Include="DTO\ChiTietPMDTO.cs" />
+    <Compile Include="DTO\DGDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\PhieuMuonDTO.cs" />
     <Compile Include="DTO\PhieuTraDTO.cs" />
@@ -137,6 +140,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider.cs" />
     <EmbeddedResource Include="FormDashBoard.resx">
       <DependentUpon>FormDashBoard.cs</DependentUpon>
     </EmbeddedResource>
