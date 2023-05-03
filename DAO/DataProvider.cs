@@ -131,7 +131,7 @@ namespace LibraryProject.DAO
                         for (int i = 0; i < parameters.Length; i++)
                             cmd.Parameters.AddWithValue(listPara[i], parameters[i]);
                     }
-                    if (int.TryParse(cmd.ExecuteScalar().ToString(), out acceptedRows))
+                    if (!int.TryParse(cmd.ExecuteScalar().ToString(), out acceptedRows))
                         throw new Exception("Không Phải kiểu int");
                 }
                 catch (Exception e)
