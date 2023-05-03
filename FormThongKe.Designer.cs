@@ -120,7 +120,6 @@ namespace LibraryProject
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(850, 75);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -160,7 +159,6 @@ namespace LibraryProject
             this.groupBox9.Size = new System.Drawing.Size(132, 82);
             this.groupBox9.TabIndex = 8;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
             // 
             // txtNXB
             // 
@@ -184,7 +182,6 @@ namespace LibraryProject
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(126, 28);
             this.panel7.TabIndex = 6;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // label8
             // 
@@ -208,7 +205,6 @@ namespace LibraryProject
             this.groupBox10.Size = new System.Drawing.Size(132, 82);
             this.groupBox10.TabIndex = 8;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Enter += new System.EventHandler(this.groupBox10_Enter);
             // 
             // txtTacGia
             // 
@@ -222,7 +218,6 @@ namespace LibraryProject
             this.txtTacGia.TabIndex = 7;
             this.txtTacGia.Text = "1";
             this.txtTacGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTacGia.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // panel8
             // 
@@ -255,7 +250,6 @@ namespace LibraryProject
             this.groupBox8.Size = new System.Drawing.Size(132, 82);
             this.groupBox8.TabIndex = 7;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Enter += new System.EventHandler(this.groupBox8_Enter);
             // 
             // txtLoaiSach
             // 
@@ -269,7 +263,6 @@ namespace LibraryProject
             this.txtLoaiSach.TabIndex = 8;
             this.txtLoaiSach.Text = "1";
             this.txtLoaiSach.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtLoaiSach.TextChanged += new System.EventHandler(this.txt_TextChanged);
             // 
             // panel6
             // 
@@ -290,7 +283,6 @@ namespace LibraryProject
             this.label6.Size = new System.Drawing.Size(104, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "LOẠI SÁCH";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // groupBox7
             // 
@@ -303,7 +295,6 @@ namespace LibraryProject
             this.groupBox7.Size = new System.Drawing.Size(132, 82);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
             // 
             // txtSach
             // 
@@ -403,7 +394,6 @@ namespace LibraryProject
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(34, 26);
             this.txtSoLuong.TabIndex = 5;
-            this.txtSoLuong.TextChanged += new System.EventHandler(this.txtSoLuong_TextChanged);
             // 
             // label4
             // 
@@ -468,7 +458,6 @@ namespace LibraryProject
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(160, 31);
             this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label10
             // 
@@ -526,7 +515,6 @@ namespace LibraryProject
             this.label11.Size = new System.Drawing.Size(105, 20);
             this.label11.TabIndex = 0;
             this.label11.Text = "NHÂN VIÊN";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // groupBox2
             // 
@@ -541,7 +529,6 @@ namespace LibraryProject
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thống kê nhân viên- Độc giả";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // groupBox11
             // 
@@ -568,7 +555,6 @@ namespace LibraryProject
             this.txtDocGia.TabIndex = 7;
             this.txtDocGia.Text = "1";
             this.txtDocGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtDocGia.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // panel9
             // 
@@ -711,7 +697,6 @@ namespace LibraryProject
             this.pictureBox1.Size = new System.Drawing.Size(72, 48);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FormThongKe
             // 
@@ -728,7 +713,6 @@ namespace LibraryProject
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "FormThongKe";
             this.Text = "FormThongKe";
-            this.Load += new System.EventHandler(this.FormThongKe_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

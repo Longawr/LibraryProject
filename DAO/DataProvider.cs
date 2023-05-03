@@ -76,19 +76,15 @@ namespace LibraryProject.DAO
         public int ExecuteNonQuery(string query, object[] parameters = null)
         {
             int acceptedRows = 0;
-
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 try
                 {
                     conn.Open();
-
                     SqlCommand cmd = new SqlCommand(query, conn);
-
                     if (parameters != null)
                     {
                         string[] temp = query.Split(' ');
-
                         List<string> listPara = new List<string>();
 
                         foreach (string item in temp)
@@ -98,14 +94,9 @@ namespace LibraryProject.DAO
                         }
 
                         for (int i = 0; i < parameters.Length; i++)
-                        {
                             cmd.Parameters.AddWithValue(listPara[i], parameters[i]);
-                        }
-
                     }
-
                     acceptedRows = cmd.ExecuteNonQuery();
-
                 }
                 catch (Exception e)
                 {
@@ -116,7 +107,42 @@ namespace LibraryProject.DAO
                     conn.Close();
                 }
             }
+            return acceptedRows;
+        }
+        public int ExecuteScalar(string query, object[] parameters = null)
+        {
+            int acceptedRows = 0;
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    if (parameters != null)
+                    {
+                        string[] temp = query.Split(' ');
+                        List<string> listPara = new List<string>();
 
+                        foreach (string item in temp)
+                        {
+                            if (item != string.Empty && item[0] == '@')
+                                listPara.Add(item);
+                        }
+                        for (int i = 0; i < parameters.Length; i++)
+                            cmd.Parameters.AddWithValue(listPara[i], parameters[i]);
+                    }
+                    if (int.TryParse(cmd.ExecuteScalar().ToString(), out acceptedRows))
+                        throw new Exception("Không Phải kiểu int");
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
             return acceptedRows;
         }
     }

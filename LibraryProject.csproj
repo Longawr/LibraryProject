@@ -57,6 +57,7 @@
     <Compile Include="BUS\SachBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
     <Compile Include="BUS\TheLoaiBUS.cs" />
+    <Compile Include="BUS\ThongKeBUS.cs" />
     <Compile Include="ChartMuon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +73,7 @@
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\TheLoaiDAO.cs" />
+    <Compile Include="DAO\ThongKeDAO.cs" />
     <Compile Include="DTO\ChiTietPMDTO.cs" />
     <Compile Include="DTO\DocGiaDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
