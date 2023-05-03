@@ -26,7 +26,7 @@ namespace LibraryProject
             //set { instance = value; }
         }
         private Provider() { }
-        string connectionString = @"Data Source=SHINN;Initial Catalog=DB_LIBRARY1;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-DUY2010\SQLEXPRESS;Initial Catalog=DB_LIBRARY;Integrated Security=True";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();

@@ -59,3 +59,24 @@ D:\New folder (3)\LibraryProject\obj\Debug\LibraryProject.csproj.GenerateResourc
 D:\New folder (3)\LibraryProject\obj\Debug\LibraryProject.csproj.CoreCompileInputs.cache
 D:\New folder (3)\LibraryProject\obj\Debug\LibraryProject.exe
 D:\New folder (3)\LibraryProject\obj\Debug\LibraryProject.pdb
+D:\HK2-2023\LibraryProject\bin\Debug\LibraryProject.exe.config
+D:\HK2-2023\LibraryProject\bin\Debug\LibraryProject.exe
+D:\HK2-2023\LibraryProject\bin\Debug\LibraryProject.pdb
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.csproj.AssemblyReference.cache
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.csproj.SuggestedBindingRedirects.cache
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormDashBoard.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormCaiDat.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormDocGia.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormDoiMK.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormLogin.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormPhieuMuon.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormPhieuTra.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormSach.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormThongKe.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormThongTinTaiKhoan.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormThuThu.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.Properties.Resources.resources
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.csproj.GenerateResource.cache
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.csproj.CoreCompileInputs.cache
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.exe
+D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.pdb

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +57,12 @@
     <Compile Include="BUS\SachBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
     <Compile Include="BUS\TheLoaiBUS.cs" />
+    <Compile Include="ChartMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartMuon.Designer.cs">
+      <DependentUpon>ChartMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\ChiTietPMDAO.cs" />
     <Compile Include="DAO\DGDao.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
@@ -141,6 +148,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Provider.cs" />
+    <EmbeddedResource Include="ChartMuon.resx">
+      <DependentUpon>ChartMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDashBoard.resx">
       <DependentUpon>FormDashBoard.cs</DependentUpon>
     </EmbeddedResource>
