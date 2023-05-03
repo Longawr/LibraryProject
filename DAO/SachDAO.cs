@@ -23,9 +23,9 @@ namespace LibraryProject.DAO
 
         public DataTable Xem()
         {
-            string sql = "select * from Sach";
-            return DataProvider.Instance.ExecuteQuery(sql);
-        }
+                string sql = "select * from Sach";
+                return DataProvider.Instance.ExecuteQuery(sql);
+            }
 
         /*public DataTable TheLoai()
         {
@@ -46,7 +46,7 @@ namespace LibraryProject.DAO
             {
                 object[] pmt = new object[] { "%" + TenSach + "%" };
                 string sql = "select * from Sach where TenSach like @TenSach";
-
+                    
                 return DataProvider.Instance.ExecuteQuery(sql, pmt);
             }
             catch (Exception ex)
@@ -69,7 +69,7 @@ namespace LibraryProject.DAO
             }
         }
 
-
+        
         public bool Xoa(string TenSach)
         {
             try
@@ -86,7 +86,7 @@ namespace LibraryProject.DAO
             {
                 throw ex;
             }
-
+            
         }
 
         public bool Sua(string MaSach, SachDTO sach)
@@ -131,15 +131,15 @@ namespace LibraryProject.DAO
                "@MaTG , " +
                 "@MaNXB , " +
                 "@NamXB )";
-                object[] pmt = new object[] {sach.MaSach, sach.TenSach,
+            object[] pmt = new object[] {sach.MaSach, sach.TenSach,
                 sach.SoLuong, sach.TonKho, sach.GiaTri, sach.MaLoai, sach.MaTG,
                 sach.MaNXB, sach.NamXB };
 
-                if (DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0)
-                {
-                    return true;
-                }
-                return false;
+            if (DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0)
+            {
+                return true;
+            }
+            return false;
             }
             catch (Exception ex)
             {
