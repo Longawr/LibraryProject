@@ -10,17 +10,21 @@ namespace LibraryProject.DTO
     {
         public string MaNhanVien { get; set; }
         public string TenNhanVien { get; set; }
-        public string Email { get; set; }
-        public string GioiTinh { get; set; }
+        public DateTime NgaySinh { get; set; }
+        public bool GioiTinh { get; set; }
         public string DiaChi { get; set; }
+        public string SoDienThoai { get; set; }
+        public string Email { get; set; }
 
-        public NhanVienDTO(string maNhanVien, string tenNhanVien = null, string email = null, string gioiTinh = null, string diaChi = null)
+        public NhanVienDTO(string maNhanVien, string tenNhanVien, DateTime ngaySinh, bool gioiTinh, string diaChi, string soDienThoai, string email)
         {
             MaNhanVien = maNhanVien;
             TenNhanVien = tenNhanVien;
-            Email = email;
+            NgaySinh = ngaySinh;
             GioiTinh = gioiTinh;
             DiaChi = diaChi;
+            SoDienThoai = soDienThoai;
+            Email = email;
         }
 
         public NhanVienDTO() { }
@@ -30,19 +34,23 @@ namespace LibraryProject.DTO
             return obj is NhanVienDTO dTO &&
                    MaNhanVien == dTO.MaNhanVien &&
                    TenNhanVien == dTO.TenNhanVien &&
-                   Email == dTO.Email &&
+                   NgaySinh == dTO.NgaySinh &&
                    GioiTinh == dTO.GioiTinh &&
-                   DiaChi == dTO.DiaChi;
+                   DiaChi == dTO.DiaChi &&
+                   SoDienThoai == dTO.SoDienThoai &&
+                   Email == dTO.Email;
         }
 
         public override int GetHashCode()
         {
-            int hashCode = 739105931;
+            int hashCode = 1329759879;
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(MaNhanVien);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(TenNhanVien);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Email);
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(GioiTinh);
+            hashCode = hashCode * -1521134295 + NgaySinh.GetHashCode();
+            hashCode = hashCode * -1521134295 + GioiTinh.GetHashCode();
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(DiaChi);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(SoDienThoai);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Email);
             return hashCode;
         }
     }

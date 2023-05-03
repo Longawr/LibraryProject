@@ -32,7 +32,7 @@ namespace LibraryProject.BUS
 
         public static void DangXuat()
         {
-            NhanVienBUS.currentNhanVien = null;
+            NhanVienBUS.currentNhanVien = new DTO.NhanVienDTO();
             TaiKhoanDAO.Instance.DangXuat();
         }
 

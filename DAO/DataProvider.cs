@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace LibraryProject.DAO
 {
@@ -24,7 +25,7 @@ namespace LibraryProject.DAO
 
         public DataProvider() { }
 
-        private string connString = @"Data Source=NGOCTRINH;Initial Catalog=QuanLyThuVienDB;Integrated Security=True";
+        private string connString = @"Data Source=NGOCTRINH;Initial Catalog=DB_LIBRARY;Integrated Security=True";
 
 
         public DataTable ExecuteQuery(string query, object[] parameters = null)
@@ -63,7 +64,7 @@ namespace LibraryProject.DAO
                 }
                 catch (Exception e)
                 {
-                    throw e;
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -109,7 +110,7 @@ namespace LibraryProject.DAO
                 }
                 catch (Exception e)
                 {
-                    throw e;
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

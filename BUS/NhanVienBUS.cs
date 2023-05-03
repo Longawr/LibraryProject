@@ -36,22 +36,26 @@ namespace LibraryProject.BUS
             {
                 DataRow dRow = dtable.Rows[0];
                 currentNhanVien.MaNhanVien = dRow[0].ToString();
-                currentNhanVien.TenNhanVien = dRow[0] != null ? dRow[1].ToString() : "";
-                currentNhanVien.Email = dRow[0] != null ? dRow[2].ToString() : "";
-                currentNhanVien.GioiTinh = dRow[0] != null ? dRow[3].ToString() : "";
-                currentNhanVien.DiaChi = dRow[0] != null ? dRow[4].ToString() : "";
+                currentNhanVien.TenNhanVien = dRow[1] != null ? dRow[1].ToString() : "";
+                currentNhanVien.NgaySinh = (DateTime)dRow[2];
+                currentNhanVien.GioiTinh = (bool)dRow[3];
+                currentNhanVien.DiaChi = dRow[4] != null ? dRow[4].ToString() : "";
+                currentNhanVien.SoDienThoai = dRow[5] != null ? dRow[5].ToString() : "";
+                currentNhanVien.Email = dRow[6] != null ? dRow[6].ToString() : "";
             }
         }
 
-        public bool SuaCurrentNhanVien(string maNV, string tenNV, string email, string gioiTinh, string diaChi)
+        public bool SuaCurrentNhanVien(string maNV, string tenNV, DateTime ngaySinh, string soDienThoai, string email, bool gioiTinh, string diaChi)
         {
             NhanVienDTO nhanVien = new NhanVienDTO();
             nhanVien.MaNhanVien = currentNhanVien.MaNhanVien;
             nhanVien.TenNhanVien = tenNV;
-            nhanVien.Email = email;
+            nhanVien.NgaySinh = ngaySinh;
             nhanVien.GioiTinh = gioiTinh;
             nhanVien.DiaChi = diaChi;
-            if (NhanVienDAO.Instance.SuaNhanVien(maNV, nhanVien))
+            nhanVien.SoDienThoai = soDienThoai;
+            nhanVien.Email = email;
+            if (NhanVienDAO.Instance.SuaNhanVien(nhanVien.MaNhanVien, nhanVien))
             {
                 currentNhanVien = nhanVien;
                 return true;

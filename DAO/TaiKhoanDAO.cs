@@ -28,33 +28,18 @@ namespace LibraryProject.DAO
 
         public bool XacNhanTkMk(String uname, String upass)
         {
-            String query = "SELECT * FROM [TaiKhoan] WHERE [username] = @username AND [password] = @password";
-
+            String query = "SELECT * FROM [TaiKhoan] WHERE [TaiKhoan] = @username AND [MatKhau] = @password";
             object[] obj = new object[] { uname, upass };
-            try
-            {
 
-                return DataProvider.Instance.ExecuteQuery(query, obj).Rows.Count > 0;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return DataProvider.Instance.ExecuteQuery(query, obj).Rows.Count > 0;
         }
 
         public int DoiMatKhau(string username, string password)
         {
-            String query = "UPDATE [dbo].[TaiKhoan] SET [password] = @password WHERE [username] = @username";
-
+            string query = "UPDATE [dbo].[TaiKhoan] SET [MatKhau] = @password WHERE [TaiKhoan] = @username";
             object[] obj = new object[] { password, username };
-            try
-            {
-                return DataProvider.Instance.ExecuteNonQuery(query, obj);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+
+            return DataProvider.Instance.ExecuteNonQuery(query, obj);
         }
 
         public void DangXuat() { }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,10 +38,16 @@ namespace LibraryProject
 
         private void FormThongTinTaiKhoan_Load(object sender, EventArgs e)
         {
+            DateTime result = DateTime.ParseExact("19000101", "yyyyMMdd",
+                CultureInfo.InvariantCulture);
+
             tbxMaNV.Text = NhanVienBUS.currentNhanVien.MaNhanVien;
             tbxTenNV.Text = NhanVienBUS.currentNhanVien.TenNhanVien;
             tbxEmail.Text = NhanVienBUS.currentNhanVien.Email;
-            cbxGioiTinh.Text = NhanVienBUS.currentNhanVien.GioiTinh == "Nữ" ? "Nữ" : "Nam";
+            cbxGioiTinh.Text = NhanVienBUS.currentNhanVien.GioiTinh ? "Nam" : "Nữ";
+            dtpkNgaySinh.Value = NhanVienBUS.currentNhanVien.NgaySinh != null ? NhanVienBUS.currentNhanVien.NgaySinh : result;
+            tbxSoDT.Text = NhanVienBUS.currentNhanVien.SoDienThoai;
+            tbxDiaChi.Text = NhanVienBUS.currentNhanVien.DiaChi;
         }
 
         private void btnDoiMK_Click(object sender, EventArgs e)
@@ -51,7 +58,8 @@ namespace LibraryProject
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (NhanVienBUS.Instance.SuaCurrentNhanVien(tbxMaNV.Text, tbxTenNV.Text, tbxEmail.Text, cbxGioiTinh.Text, tbxDiaChi.Text))
+            bool gioiTinh = cbxGioiTinh.Text == "Nam";
+            if (NhanVienBUS.Instance.SuaCurrentNhanVien(tbxMaNV.Text, tbxTenNV.Text, dtpkNgaySinh.Value, tbxSoDT.Text, tbxEmail.Text, gioiTinh, tbxDiaChi.Text))
             {
                 MessageBox.Show("Lưu thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OnDataAvailable(null);

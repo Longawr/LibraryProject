@@ -69,11 +69,6 @@ namespace LibraryProject
             }
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-            tbxUser.Select();
-        }
-
         private void btbLogin_Click(object sender, EventArgs e)
         {
             if (tbxUser.Text == defaultUsernameText || tbxPassword.Text == defaultPasswordText)
@@ -104,11 +99,6 @@ namespace LibraryProject
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void FormLogin_KeyDown(object sender, KeyEventArgs e)
-        {
-
         }
 
         private void tbxPassword_KeyDown(object sender, KeyEventArgs e)

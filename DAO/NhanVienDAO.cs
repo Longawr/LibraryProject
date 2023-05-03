@@ -29,40 +29,22 @@ namespace LibraryProject.DAO
 
         public DataTable GetNhanVienbyId(String id)
         {
-            try
-            {
-                String query = "SELECT * FROM [NhanVien] WHERE [MaNhanVien] = @id";
+            string query = "SELECT * FROM [ThuThu] WHERE [MaThuThu] = @id";
 
-                object[] obj = new object[] { id };
+            object[] obj = new object[] { id };
 
-                DataTable dTable = DataProvider.Instance.ExecuteQuery(query, obj);
+            DataTable dTable = DataProvider.Instance.ExecuteQuery(query, obj);
 
-                if (dTable.Rows.Count > 0)
-                    return dTable;
-                return null;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
+            return dTable;
         }
 
         public bool SuaNhanVien(string maNV, NhanVienDTO nhanVien)
         {
-            try
-            {
-                String query = "UPDATE [dbo].[NhanVien] SET [TenNhanVien] = @TenNhanVien , [Email] = @Email , [GioiTinh] = @GioiTinh ,[DiaChi] = @DiaChi WHERE [MaNhanVien] = @MaNhanVien";
+            string query = "UPDATE [ThuThu] SET [TenThuThu] = @TenNhanVien , [Email] = @Email , [GioiTinh] = @GioiTinh ,[DiaChi] = @DiaChi , [NgaySinh] = @NgaySinh , [SDT] = @SoDT WHERE [MaThuThu] = @MaNhanVien";
 
-                object[] obj = new object[] { nhanVien.TenNhanVien, nhanVien.Email, nhanVien.GioiTinh, nhanVien.DiaChi, nhanVien.MaNhanVien };
+            object[] obj = new object[] { nhanVien.TenNhanVien, nhanVien.Email, nhanVien.GioiTinh, nhanVien.DiaChi, nhanVien.NgaySinh, nhanVien.SoDienThoai, maNV };
 
-                return DataProvider.Instance.ExecuteNonQuery(query, obj) > 0;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            return DataProvider.Instance.ExecuteNonQuery(query, obj) > 0;
         }
     }
 }

@@ -46,13 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\ChiTietPMBUS.cs" />
+    <Compile Include="BUS\DataProducer.cs" />
     <Compile Include="BUS\FormBUS.cs" />
     <Compile Include="BUS\NhanVienBUS.cs" />
+    <Compile Include="BUS\PhieuMuonBUS.cs" />
+    <Compile Include="BUS\PhieuTraBUS.cs" />
+    <Compile Include="BUS\SachBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
+    <Compile Include="BUS\TheLoaiBUS.cs" />
+    <Compile Include="DAO\ChiTietPMDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\PhieuMuonDAO.cs" />
+    <Compile Include="DAO\PhieuTraDAO.cs" />
+    <Compile Include="DAO\SachDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\TheLoaiDAO.cs" />
+    <Compile Include="DTO\ChiTietPMDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="DTO\PhieuMuonDTO.cs" />
+    <Compile Include="DTO\PhieuTraDTO.cs" />
+    <Compile Include="DTO\SachDTO.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
     <Compile Include="FormDashBoard.cs">
       <SubType>Form</SubType>
