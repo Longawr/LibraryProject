@@ -34,6 +34,7 @@ namespace LibraryProject
             this.panelMain = new System.Windows.Forms.Panel();
             this.dataMain = new System.Windows.Forms.DataGridView();
             this.panelFoot = new System.Windows.Forms.Panel();
+            this.btnXem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTim = new System.Windows.Forms.Button();
@@ -87,10 +88,12 @@ namespace LibraryProject
             this.dataMain.RowTemplate.Height = 24;
             this.dataMain.Size = new System.Drawing.Size(800, 446);
             this.dataMain.TabIndex = 0;
+            this.dataMain.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataMain_CellContentClick);
             // 
             // panelFoot
             // 
             this.panelFoot.BackColor = System.Drawing.Color.DimGray;
+            this.panelFoot.Controls.Add(this.btnXem);
             this.panelFoot.Controls.Add(this.btnSua);
             this.panelFoot.Controls.Add(this.btnXoa);
             this.panelFoot.Controls.Add(this.btnTim);
@@ -102,6 +105,18 @@ namespace LibraryProject
             this.panelFoot.Size = new System.Drawing.Size(800, 50);
             this.panelFoot.TabIndex = 5;
             // 
+            // btnXem
+            // 
+            this.btnXem.BackColor = System.Drawing.Color.White;
+            this.btnXem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXem.Location = new System.Drawing.Point(12, 12);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(75, 25);
+            this.btnXem.TabIndex = 6;
+            this.btnXem.Text = "Refresh";
+            this.btnXem.UseVisualStyleBackColor = false;
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.White;
@@ -112,47 +127,51 @@ namespace LibraryProject
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.White;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Location = new System.Drawing.Point(620, 12);
+            this.btnXoa.Location = new System.Drawing.Point(600, 12);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 25);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnTim
             // 
             this.btnTim.BackColor = System.Drawing.Color.White;
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTim.Location = new System.Drawing.Point(440, 12);
+            this.btnTim.Location = new System.Drawing.Point(347, 12);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(75, 25);
             this.btnTim.TabIndex = 3;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.White;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Location = new System.Drawing.Point(530, 12);
+            this.btnThem.Location = new System.Drawing.Point(483, 13);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 25);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // tbxSearch
             // 
             this.tbxSearch.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxSearch.Location = new System.Drawing.Point(12, 11);
+            this.tbxSearch.Location = new System.Drawing.Point(110, 10);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(411, 28);
+            this.tbxSearch.Size = new System.Drawing.Size(210, 28);
             this.tbxSearch.TabIndex = 1;
             // 
             // FormDocGia
@@ -167,6 +186,7 @@ namespace LibraryProject
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDocGia";
             this.Text = "FormDocGia";
+            this.Load += new System.EventHandler(this.FormDocGia_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelMain.ResumeLayout(false);
@@ -189,5 +209,6 @@ namespace LibraryProject
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.Button btnXem;
     }
 }

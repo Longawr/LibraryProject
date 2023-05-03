@@ -25,7 +25,7 @@ namespace LibraryProject.DAO
 
         public DataProvider() { }
 
-        private string connString = @"Data Source=NGOCTRINH;Initial Catalog=DB_LIBRARY;Integrated Security=True";
+        private string connString = @"Data Source=SHINN;Initial Catalog=DB_LIBRARY;Integrated Security=True";
 
 
         public DataTable ExecuteQuery(string query, object[] parameters = null)
