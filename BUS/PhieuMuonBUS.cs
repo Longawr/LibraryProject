@@ -22,11 +22,10 @@ namespace LibraryProject.BUS
                     instance = new PhieuMuonBUS();
                 return instance;
             }
-            //set => instance = value; 
+            //set => instance = value;
         }
 
-        private PhieuMuonBUS() { }
-
+        public PhieuMuonBUS() { }
         public void XemPhieuMuon(DataGridView data)
         {
             data.DataSource = PhieuMuonDAO.Instance.XemPhieuMuon();

@@ -61,7 +61,7 @@ namespace LibraryProject
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 49);
+            this.panel1.Size = new System.Drawing.Size(900, 61);
             this.panel1.TabIndex = 0;
             // 
             // panelCTPM
@@ -118,7 +118,7 @@ namespace LibraryProject
             this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(304, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 24);
+            this.label1.Size = new System.Drawing.Size(216, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "PHIẾU MƯỢN SÁCH";
             // 
@@ -231,7 +231,7 @@ namespace LibraryProject
             // 
             // FormPhieuMuon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 550);
@@ -239,6 +239,7 @@ namespace LibraryProject
             this.Controls.Add(this.panelFoot);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormPhieuMuon";
             this.Text = "FormPhieuMuon";
             this.Load += new System.EventHandler(this.FormPhieuMuon_Load);

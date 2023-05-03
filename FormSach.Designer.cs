@@ -202,6 +202,17 @@ namespace LibraryProject
             // 
             // panelHead
             // 
+<<<<<<< HEAD
+            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(900, 71);
+            this.panel1.TabIndex = 0;
+=======
             this.panelHead.BackColor = System.Drawing.Color.Gray;
             this.panelHead.Controls.Add(this.pbxSach);
             this.panelHead.Controls.Add(this.labelTitle);
@@ -211,9 +222,22 @@ namespace LibraryProject
             this.panelHead.Name = "panelHead";
             this.panelHead.Size = new System.Drawing.Size(900, 57);
             this.panelHead.TabIndex = 0;
+>>>>>>> a4f0485bd219b74ba8e658d98fb620ddcc3f5062
             // 
             // pbxSach
             // 
+<<<<<<< HEAD
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 71);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+=======
             this.pbxSach.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxSach.BackgroundImage")));
             this.pbxSach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxSach.Dock = System.Windows.Forms.DockStyle.Left;
@@ -224,9 +248,21 @@ namespace LibraryProject
             this.pbxSach.Size = new System.Drawing.Size(89, 57);
             this.pbxSach.TabIndex = 4;
             this.pbxSach.TabStop = false;
+>>>>>>> a4f0485bd219b74ba8e658d98fb620ddcc3f5062
             // 
             // labelTitle
             // 
+<<<<<<< HEAD
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(106, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 47);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "SÁCH";
+=======
             this.labelTitle.AutoSize = true;
             this.labelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labelTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,6 +272,7 @@ namespace LibraryProject
             this.labelTitle.Size = new System.Drawing.Size(123, 47);
             this.labelTitle.TabIndex = 3;
             this.labelTitle.Text = "SÁCH";
+>>>>>>> a4f0485bd219b74ba8e658d98fb620ddcc3f5062
             // 
             // panelMain
             // 
@@ -255,6 +292,7 @@ namespace LibraryProject
             this.ClientSize = new System.Drawing.Size(900, 688);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHead);
+>>>>>>> a4f0485bd219b74ba8e658d98fb620ddcc3f5062
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSach";

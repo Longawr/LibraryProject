@@ -1,4 +1,6 @@
-﻿using LibraryProject.DTO;
+﻿using LibraryProject.BUS;
+using LibraryProject.Controllers;
+using LibraryProject.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace LibraryProject.DAO
 {
@@ -21,10 +24,10 @@ namespace LibraryProject.DAO
                     instance = new PhieuMuonDAO();
                 return instance;
             }
-            //set => instance = value; 
+            //set => instance = value;
         }
 
-        private PhieuMuonDAO() { }
+        public PhieuMuonDAO() { }
 
         public DataTable XemPhieuMuon()
         {
@@ -33,16 +36,17 @@ namespace LibraryProject.DAO
             DataTable dTable = DataProvider.Instance.ExecuteQuery(query);
 
             return dTable;
-        }
+            }
 
         public int TaoPhieuMuon(PhieuMuonDTO phieuMuon)
-        {
+            {
             object[] obj = new object[] { phieuMuon.MaPM, phieuMuon.MaDG, phieuMuon.TaiKhoan, phieuMuon.NgayMuon, phieuMuon.HanTra, phieuMuon.DaTraXong };
 
             string query = "INSERT INTO [dbo].[PhieuMuon] ([MaPM],[MaDG],[TaiKhoan],[NgayMuon],[HanTra],[DaTraXong])" +
                 "VALUES( @MaPM , @MaDG , @TaiKhoan , @NgayMuon , @HanTra , @DaTraXong )";
 
             return DataProvider.Instance.ExecuteNonQuery(query, obj);
+            }
         }
 
         public int XoaPhieuMuon(string maPhieuMuon)
@@ -52,15 +56,15 @@ namespace LibraryProject.DAO
             string query = "DELETE FROM [dbo].[PhieuMuon] WHERE [MaPM] = @maPM";
 
             return DataProvider.Instance.ExecuteNonQuery(query, obj);
-        }
+            }
 
         public int SuaPhieuMuon(PhieuMuonDTO phieuMuon)
-        {
+            {
             object[] obj = new object[] { phieuMuon.MaDG, phieuMuon.TaiKhoan, phieuMuon.NgayMuon, phieuMuon.HanTra, phieuMuon.DaTraXong, phieuMuon.MaPM };
 
             string query = "UPDATE [dbo].[PhieuMuon] SET [MaDG] = @MaDG ,[TaiKhoan] = @TaiKhoan ,[NgayMuon] = @NgayMuon ,[HanTra] = @HanTra ,[DaTraXong] = @DaTraXong WHERE [MaPM] = @MaPM";
 
             return DataProvider.Instance.ExecuteNonQuery(query, obj);
+            }
         }
-    }
 }

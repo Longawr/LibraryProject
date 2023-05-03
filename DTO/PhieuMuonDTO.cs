@@ -14,18 +14,18 @@ namespace LibraryProject.DTO
         public DateTime NgayMuon { get; set; }
         public DateTime HanTra { get; set; }
         public bool DaTraXong { get; set; }
-
+        
         public PhieuMuonDTO() { }
 
         public PhieuMuonDTO(string maPM, string maDG, string taiKhoan, DateTime ngayMuon, DateTime hanTra, bool daTraXong)
-        {
+            {
             MaPM = maPM;
             MaDG = maDG;
             TaiKhoan = taiKhoan;
             NgayMuon = ngayMuon;
             HanTra = hanTra;
             DaTraXong = daTraXong;
-        }
+            }
 
         public override bool Equals(object obj)
         {
@@ -37,7 +37,7 @@ namespace LibraryProject.DTO
                    HanTra == dTO.HanTra &&
                    DaTraXong == dTO.DaTraXong;
         }
-
+           
         public override int GetHashCode()
         {
             int hashCode = -173499981;

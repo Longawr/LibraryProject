@@ -1,13 +1,19 @@
 ﻿//using LibraryProject.Controller;
 using LibraryProject.DAO;
 using LibraryProject.DTO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using static LibraryProject.DAO.SachDAO;
 
 namespace LibraryProject.BUS
 {
     class SachBUS
     {
-
+        
         private static SachBUS instance;
         public static SachBUS Instance
         {
@@ -51,7 +57,7 @@ namespace LibraryProject.BUS
         {
             DataGridViewRow row = data.SelectedCells[0].OwningRow;
             string OldMaSach = data.SelectedCells[0].OwningRow.Cells["MaSach"].Value.ToString();
-
+            
 
             string MaSach = row.Cells["MaSach"].Value.ToString();
             string TenSach = row.Cells["TenSach"].Value.ToString();
