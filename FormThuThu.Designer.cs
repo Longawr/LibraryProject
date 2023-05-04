@@ -34,7 +34,6 @@ namespace LibraryProject
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.pnlDgv = new System.Windows.Forms.Panel();
             this.panelFoot = new System.Windows.Forms.Panel();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -45,7 +44,6 @@ namespace LibraryProject
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMain.SuspendLayout();
-            this.pnlDgv.SuspendLayout();
             this.panelFoot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).BeginInit();
             this.SuspendLayout();
@@ -87,21 +85,12 @@ namespace LibraryProject
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.pnlDgv);
+            this.panelMain.Controls.Add(this.dgvThuThu);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 50);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1000, 700);
             this.panelMain.TabIndex = 6;
-            // 
-            // pnlDgv
-            // 
-            this.pnlDgv.Controls.Add(this.dgvThuThu);
-            this.pnlDgv.Location = new System.Drawing.Point(0, 0);
-            this.pnlDgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnlDgv.Name = "pnlDgv";
-            this.pnlDgv.Size = new System.Drawing.Size(1000, 706);
-            this.pnlDgv.TabIndex = 1;
             // 
             // panelFoot
             // 
@@ -123,7 +112,7 @@ namespace LibraryProject
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Location = new System.Drawing.Point(903, 11);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 25);
+            this.btnSua.Size = new System.Drawing.Size(75, 28);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -135,7 +124,7 @@ namespace LibraryProject
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Location = new System.Drawing.Point(813, 11);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 25);
+            this.btnXoa.Size = new System.Drawing.Size(75, 28);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -147,7 +136,7 @@ namespace LibraryProject
             this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTim.Location = new System.Drawing.Point(440, 12);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 25);
+            this.btnTim.Size = new System.Drawing.Size(75, 27);
             this.btnTim.TabIndex = 3;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = false;
@@ -159,7 +148,7 @@ namespace LibraryProject
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Location = new System.Drawing.Point(723, 11);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 25);
+            this.btnThem.Size = new System.Drawing.Size(75, 28);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -177,7 +166,7 @@ namespace LibraryProject
             // dgvThuThu
             // 
             this.dgvThuThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThuThu.Location = new System.Drawing.Point(0, -3);
+            this.dgvThuThu.Location = new System.Drawing.Point(0, 0);
             this.dgvThuThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvThuThu.Name = "dgvThuThu";
             this.dgvThuThu.RowHeadersVisible = false;
@@ -203,7 +192,6 @@ namespace LibraryProject
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMain.ResumeLayout(false);
-            this.pnlDgv.ResumeLayout(false);
             this.panelFoot.ResumeLayout(false);
             this.panelFoot.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).EndInit();
@@ -222,7 +210,6 @@ namespace LibraryProject
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.TextBox tbxSearch;
-        private System.Windows.Forms.Panel pnlDgv;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvThuThu;
     }

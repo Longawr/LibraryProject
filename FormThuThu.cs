@@ -58,16 +58,8 @@ namespace LibraryProject
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            bool thuThu = ThuThuBUS.Instance.SuaThuThu(dgvThuThu);
-            bool taiKhoan = TaiKhoanBUS.Instance.SuaTaiKhoan(dgvThuThu);
-            if (thuThu && taiKhoan)
-                MessageBox.Show("Sua Thanh Cong");
-            else if (!thuThu && !taiKhoan)
+            if (!ThuThuBUS.Instance.SuaThuThu(dgvThuThu) && !TaiKhoanBUS.Instance.SuaTaiKhoan(dgvThuThu))
                 MessageBox.Show("Sua Khong Thanh Cong");
-            else if (!thuThu)
-                MessageBox.Show("Sua Thu Thu Khong Thanh Cong");
-            else
-                MessageBox.Show("Sua Tai Khoan Khong Thanh Cong");
             ThuThuBUS.Instance.XemThuThu(dgvThuThu);
         }
     }

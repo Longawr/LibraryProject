@@ -29,10 +29,10 @@ namespace LibraryProject.DAO
 
         public bool XacNhanTkMk(String uname, String upass)
         {
-            String query = "SELECT * FROM [TaiKhoan] WHERE [TaiKhoan] = @username AND [MatKhau] = @password";
+            String query = "SELECT COUNT(*) FROM [TaiKhoan] WHERE [TaiKhoan] = @username AND [MatKhau] = @password";
             object[] obj = new object[] { uname, upass };
 
-            return DataProvider.Instance.ExecuteQuery(query, obj).Rows.Count > 0;
+            return DataProvider.Instance.ExecuteScalar(query, obj) > 0;
         }
 
         public int DoiMatKhau(string username, string password)
