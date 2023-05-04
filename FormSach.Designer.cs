@@ -78,35 +78,39 @@ namespace LibraryProject
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.Aqua;
             this.btnThem.Location = new System.Drawing.Point(667, 77);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(93, 32);
             this.btnThem.TabIndex = 33;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.Yellow;
             this.btnXoa.Location = new System.Drawing.Point(667, 123);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(93, 32);
             this.btnXoa.TabIndex = 32;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.Red;
+            this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnSua.Location = new System.Drawing.Point(786, 77);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(93, 32);
             this.btnSua.TabIndex = 31;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // lblTheLoai
@@ -120,13 +124,15 @@ namespace LibraryProject
             // 
             // btnLoc
             // 
+            this.btnLoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnLoc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnLoc.Location = new System.Drawing.Point(452, 123);
             this.btnLoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.Size = new System.Drawing.Size(93, 32);
             this.btnLoc.TabIndex = 29;
             this.btnLoc.Text = "Lọc";
-            this.btnLoc.UseVisualStyleBackColor = true;
+            this.btnLoc.UseVisualStyleBackColor = false;
             this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
             // 
             // cBxTheLoai
@@ -139,13 +145,14 @@ namespace LibraryProject
             // 
             // btnRefresh
             // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Magenta;
             this.btnRefresh.Location = new System.Drawing.Point(786, 123);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(93, 32);
             this.btnRefresh.TabIndex = 27;
             this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // tBxTenSach
@@ -167,17 +174,20 @@ namespace LibraryProject
             // 
             // btnTimKiem
             // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnTimKiem.Location = new System.Drawing.Point(452, 74);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(93, 32);
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.PapayaWhip;
             this.groupBox2.Controls.Add(this.dgvSach);
             this.groupBox2.Location = new System.Drawing.Point(0, 2);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -202,7 +212,7 @@ namespace LibraryProject
             // 
             // panelHead
             // 
-            this.panelHead.BackColor = System.Drawing.Color.Gray;
+            this.panelHead.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panelHead.Controls.Add(this.pbxSach);
             this.panelHead.Controls.Add(this.labelTitle);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
@@ -228,9 +238,9 @@ namespace LibraryProject
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelTitle.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.Navy;
+            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.labelTitle.Location = new System.Drawing.Point(94, 7);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(123, 47);
@@ -239,6 +249,7 @@ namespace LibraryProject
             // 
             // panelMain
             // 
+            this.panelMain.BackColor = System.Drawing.Color.PapayaWhip;
             this.panelMain.Controls.Add(this.groupBox1);
             this.panelMain.Controls.Add(this.groupBox2);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;

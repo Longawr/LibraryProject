@@ -59,12 +59,6 @@
     <Compile Include="BUS\TheLoaiBUS.cs" />
     <Compile Include="BUS\ThongKeBUS.cs" />
     <Compile Include="BUS\ThuThuBUS.cs" />
-    <Compile Include="ChartMuon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChartMuon.Designer.cs">
-      <DependentUpon>ChartMuon.cs</DependentUpon>
-    </Compile>
     <Compile Include="DAO\ChiTietPMDAO.cs" />
     <Compile Include="DAO\DocGiaDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
@@ -84,6 +78,18 @@
     <Compile Include="DTO\SachDTO.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
     <Compile Include="DTO\ThuThuDTO.cs" />
+    <Compile Include="FormChartMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChartMuon.Designer.cs">
+      <DependentUpon>FormChartMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChartTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChartTra.Designer.cs">
+      <DependentUpon>FormChartTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,8 +162,26 @@
     <Compile Include="FormThuThu.Designer.cs">
       <DependentUpon>FormThuThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTopDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTopDocGia.Designer.cs">
+      <DependentUpon>FormTopDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTopSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTopSach.Designer.cs">
+      <DependentUpon>FormTopSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormChartMuon.resx">
+      <DependentUpon>FormChartMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChartTra.resx">
+      <DependentUpon>FormChartTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDashBoard.resx">
       <DependentUpon>FormDashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThuThu.resx">
       <DependentUpon>FormThuThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTopDocGia.resx">
+      <DependentUpon>FormTopDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTopSach.resx">
+      <DependentUpon>FormTopSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

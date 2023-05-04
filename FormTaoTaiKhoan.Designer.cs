@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlTaoTaiKhoan = new System.Windows.Forms.Panel();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.ckbNu = new System.Windows.Forms.CheckBox();
             this.ckbNam = new System.Windows.Forms.CheckBox();
@@ -47,7 +48,6 @@
             this.tbxUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.pnlTaoTaiKhoan.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,15 +77,28 @@
             this.pnlTaoTaiKhoan.Size = new System.Drawing.Size(854, 599);
             this.pnlTaoTaiKhoan.TabIndex = 0;
             // 
+            // btnThoat
+            // 
+            this.btnThoat.AutoSize = true;
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnThoat.Location = new System.Drawing.Point(546, 463);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(115, 40);
+            this.btnThoat.TabIndex = 22;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // btnThem
             // 
             this.btnThem.AutoSize = true;
+            this.btnThem.BackColor = System.Drawing.Color.Lime;
             this.btnThem.Location = new System.Drawing.Point(158, 463);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(115, 40);
             this.btnThem.TabIndex = 21;
             this.btnThem.Text = "Tạo tài khoản";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // ckbNu
@@ -229,21 +242,11 @@
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username: ";
             // 
-            // btnThoat
-            // 
-            this.btnThoat.AutoSize = true;
-            this.btnThoat.Location = new System.Drawing.Point(546, 463);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(115, 40);
-            this.btnThoat.TabIndex = 22;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
             // FormTaoTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(878, 632);
             this.Controls.Add(this.pnlTaoTaiKhoan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

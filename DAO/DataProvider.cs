@@ -25,7 +25,7 @@ namespace LibraryProject.DAO
 
         public DataProvider() { }
 
-        private readonly string connString = @"Data Source=DESKTOP-B8BJQUS\SQLSERVER;Initial Catalog=DB_LIBRARY;Integrated Security=True";
+        private readonly string connString = @"Data Source=DESKTOP-DUY2010\SQLEXPRESS;Initial Catalog=DB_LIBRARY;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameters = null)
         {

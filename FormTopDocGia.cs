@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryProject.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,16 @@ using System.Windows.Forms;
 
 namespace LibraryProject
 {
-    public partial class ChartMuon : Form
+    public partial class FormTopDocGia : Form
     {
-        public ChartMuon()
+        public FormTopDocGia()
         {
             InitializeComponent();
         }
 
-        private void ChartMuon_Load(object sender, EventArgs e)
+        private void FormTopDocGia_Load(object sender, EventArgs e)
         {
-
+            ThongKeBUS.Instance.TopDocGia(dtgvDocGia);
         }
     }
 }

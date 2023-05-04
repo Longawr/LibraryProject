@@ -29,6 +29,11 @@ namespace LibraryProject.DAO
             string query = "SELECT COUNT(*) FROM Sach";
             return DataProvider.Instance.ExecuteScalar(query);
         }
+        public int TongSoSach()
+        {
+            string query = "SELECT SUM(SoLuong) AS TongSoLuongTon FROM Sach";
+            return DataProvider.Instance.ExecuteScalar(query);
+        }
 
         public int XemSoTheLoai()
         {
@@ -41,7 +46,7 @@ namespace LibraryProject.DAO
             string query = "SELECT COUNT(*) FROM TacGia";
             return DataProvider.Instance.ExecuteScalar(query);
         }
-
+        
         public int XemSoNXB()
         {
             string query = "SELECT COUNT(*) FROM NXB";
@@ -91,5 +96,28 @@ namespace LibraryProject.DAO
             string query = "SELECT COUNT(*) FROM PhieuMuon WHERE HanTra < GETDATE() ";
             return DataProvider.Instance.ExecuteScalar(query);
         }
+        public DataTable BieuDoMuon()
+        {
+            string query = "SELECT MONTH(NgayMuon) AS Thang, COUNT(*) AS SoLuotMuon FROM PHIEUMUON GROUP BY MONTH(NgayMuon)";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable BieuDoTra()
+        {
+            string query = "SELECT MONTH(NgayTra) AS Thang, COUNT(*) AS SoLuotTra FROM PHIEUTRA GROUP BY MONTH(NgayTra)";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable TopDocGia()
+        {
+            string query = "SELECT TOP 5 pm.MADG, dg.TenDG, COUNT(*) as SoLuotMuon\r\n                        FROM PhieuMuon pm\r\n                        JOIN CTPM ct ON pm.MaPM = ct.MaPM\r\n                        JOIN DocGia dg ON pm.MaDG = dg.MaDG\r\n                        GROUP BY pm.MaDG, dg.TenDG\r\n                        ORDER BY SoLuotMuon DESC";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable TopSach()
+        {
+            string query = "SELECT TOP 5 Sach.MaSach, Sach.TenSach, COUNT(CTPM.MaSach) AS SoLuotMuon\r\nFROM Sach\r\nINNER JOIN CTPM ON Sach.MaSach = CTPM.MaSach\r\nGROUP BY Sach.MaSach, Sach.TenSach\r\nORDER BY SoLuotMuon DESC\r\n";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
     }
 }

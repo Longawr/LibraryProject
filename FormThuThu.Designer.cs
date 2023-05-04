@@ -29,6 +29,7 @@ namespace LibraryProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThuThu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
@@ -41,17 +42,20 @@ namespace LibraryProject
             this.btnTim = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.pnlDgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuThu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataMain)).BeginInit();
             this.panelFoot.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -63,12 +67,12 @@ namespace LibraryProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(360, 20);
+            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(82, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 27);
+            this.label1.Size = new System.Drawing.Size(149, 37);
             this.label1.TabIndex = 3;
             this.label1.Text = "THỦ THƯ";
             // 
@@ -191,6 +195,16 @@ namespace LibraryProject
             this.tbxSearch.Size = new System.Drawing.Size(462, 32);
             this.tbxSearch.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 50);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormThuThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -213,6 +227,7 @@ namespace LibraryProject
             ((System.ComponentModel.ISupportInitialize)(this.dataMain)).EndInit();
             this.panelFoot.ResumeLayout(false);
             this.panelFoot.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -231,5 +246,6 @@ namespace LibraryProject
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Panel pnlDgv;
         private System.Windows.Forms.DataGridView dgvThuThu;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

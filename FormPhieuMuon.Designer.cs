@@ -53,7 +53,7 @@ namespace LibraryProject
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.panelCTPM);
             this.panel1.Controls.Add(this.label1);
@@ -61,17 +61,18 @@ namespace LibraryProject
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(711, 49);
+            this.panel1.Size = new System.Drawing.Size(800, 61);
             this.panel1.TabIndex = 0;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.White;
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Location = new System.Drawing.Point(625, 8);
+            this.btnRefresh.ForeColor = System.Drawing.Color.Yellow;
+            this.btnRefresh.Location = new System.Drawing.Point(703, 10);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(73, 27);
+            this.btnRefresh.Size = new System.Drawing.Size(82, 34);
             this.btnRefresh.TabIndex = 10;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -82,32 +83,33 @@ namespace LibraryProject
             this.panelCTPM.Controls.Add(this.tbxSoLuong);
             this.panelCTPM.Controls.Add(this.btnTraSach);
             this.panelCTPM.Controls.Add(this.btnTroLai);
-            this.panelCTPM.Location = new System.Drawing.Point(11, 6);
+            this.panelCTPM.Location = new System.Drawing.Point(12, 8);
             this.panelCTPM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelCTPM.Name = "panelCTPM";
-            this.panelCTPM.Size = new System.Drawing.Size(254, 39);
+            this.panelCTPM.Size = new System.Drawing.Size(286, 49);
             this.panelCTPM.TabIndex = 9;
             this.panelCTPM.Visible = false;
             // 
             // tbxSoLuong
             // 
             this.tbxSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxSoLuong.Location = new System.Drawing.Point(97, 2);
+            this.tbxSoLuong.Location = new System.Drawing.Point(109, 2);
             this.tbxSoLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxSoLuong.Name = "tbxSoLuong";
-            this.tbxSoLuong.Size = new System.Drawing.Size(69, 27);
+            this.tbxSoLuong.Size = new System.Drawing.Size(77, 31);
             this.tbxSoLuong.TabIndex = 10;
             this.tbxSoLuong.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxSoLuong_KeyDown);
             // 
             // btnTraSach
             // 
-            this.btnTraSach.BackColor = System.Drawing.Color.White;
+            this.btnTraSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnTraSach.Enabled = false;
             this.btnTraSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTraSach.Location = new System.Drawing.Point(180, 2);
+            this.btnTraSach.ForeColor = System.Drawing.Color.Purple;
+            this.btnTraSach.Location = new System.Drawing.Point(202, 2);
             this.btnTraSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTraSach.Name = "btnTraSach";
-            this.btnTraSach.Size = new System.Drawing.Size(73, 27);
+            this.btnTraSach.Size = new System.Drawing.Size(82, 34);
             this.btnTraSach.TabIndex = 9;
             this.btnTraSach.Text = "Trả Sách";
             this.btnTraSach.UseVisualStyleBackColor = false;
@@ -115,13 +117,14 @@ namespace LibraryProject
             // 
             // btnTroLai
             // 
-            this.btnTroLai.BackColor = System.Drawing.Color.White;
+            this.btnTroLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnTroLai.Enabled = false;
             this.btnTroLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTroLai.ForeColor = System.Drawing.Color.Firebrick;
             this.btnTroLai.Location = new System.Drawing.Point(3, 2);
             this.btnTroLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTroLai.Name = "btnTroLai";
-            this.btnTroLai.Size = new System.Drawing.Size(73, 27);
+            this.btnTroLai.Size = new System.Drawing.Size(82, 34);
             this.btnTroLai.TabIndex = 8;
             this.btnTroLai.Text = "Trờ lại";
             this.btnTroLai.UseVisualStyleBackColor = false;
@@ -130,12 +133,12 @@ namespace LibraryProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(270, 10);
+            this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(304, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 24);
+            this.label1.Size = new System.Drawing.Size(261, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "PHIẾU MƯỢN SÁCH";
             // 
@@ -143,10 +146,10 @@ namespace LibraryProject
             // 
             this.panelMain.Controls.Add(this.dataMain);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 49);
+            this.panelMain.Location = new System.Drawing.Point(0, 61);
             this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(711, 349);
+            this.panelMain.Size = new System.Drawing.Size(800, 437);
             this.panelMain.TabIndex = 8;
             // 
             // dataMain
@@ -158,7 +161,7 @@ namespace LibraryProject
             this.dataMain.Name = "dataMain";
             this.dataMain.RowHeadersWidth = 51;
             this.dataMain.RowTemplate.Height = 24;
-            this.dataMain.Size = new System.Drawing.Size(711, 349);
+            this.dataMain.Size = new System.Drawing.Size(800, 437);
             this.dataMain.TabIndex = 0;
             // 
             // panelFoot
@@ -170,20 +173,20 @@ namespace LibraryProject
             this.panelFoot.Controls.Add(this.btnThem);
             this.panelFoot.Controls.Add(this.tbxSearch);
             this.panelFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFoot.Location = new System.Drawing.Point(0, 398);
+            this.panelFoot.Location = new System.Drawing.Point(0, 498);
             this.panelFoot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFoot.Name = "panelFoot";
-            this.panelFoot.Size = new System.Drawing.Size(711, 42);
+            this.panelFoot.Size = new System.Drawing.Size(800, 52);
             this.panelFoot.TabIndex = 7;
             // 
             // btnXemCT
             // 
             this.btnXemCT.BackColor = System.Drawing.Color.White;
             this.btnXemCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXemCT.Location = new System.Drawing.Point(358, 10);
+            this.btnXemCT.Location = new System.Drawing.Point(403, 12);
             this.btnXemCT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXemCT.Name = "btnXemCT";
-            this.btnXemCT.Size = new System.Drawing.Size(97, 27);
+            this.btnXemCT.Size = new System.Drawing.Size(109, 34);
             this.btnXemCT.TabIndex = 7;
             this.btnXemCT.Text = "Xem Chi Tiết";
             this.btnXemCT.UseVisualStyleBackColor = false;
@@ -193,10 +196,10 @@ namespace LibraryProject
             // 
             this.btnSua.BackColor = System.Drawing.Color.White;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Location = new System.Drawing.Point(631, 10);
+            this.btnSua.Location = new System.Drawing.Point(710, 12);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(67, 27);
+            this.btnSua.Size = new System.Drawing.Size(75, 34);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -206,10 +209,10 @@ namespace LibraryProject
             // 
             this.btnXoa.BackColor = System.Drawing.Color.White;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Location = new System.Drawing.Point(551, 10);
+            this.btnXoa.Location = new System.Drawing.Point(620, 12);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(67, 27);
+            this.btnXoa.Size = new System.Drawing.Size(75, 34);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -219,10 +222,10 @@ namespace LibraryProject
             // 
             this.btnThem.BackColor = System.Drawing.Color.White;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Location = new System.Drawing.Point(471, 10);
+            this.btnThem.Location = new System.Drawing.Point(530, 12);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(67, 27);
+            this.btnThem.Size = new System.Drawing.Size(75, 34);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -232,10 +235,10 @@ namespace LibraryProject
             // 
             this.tbxSearch.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxSearch.Location = new System.Drawing.Point(11, 9);
+            this.tbxSearch.Location = new System.Drawing.Point(12, 11);
             this.tbxSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(318, 28);
+            this.tbxSearch.Size = new System.Drawing.Size(357, 32);
             this.tbxSearch.TabIndex = 1;
             this.tbxSearch.Text = " Tìm Kiếm";
             this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
@@ -244,14 +247,15 @@ namespace LibraryProject
             // 
             // FormPhieuMuon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(711, 440);
+            this.ClientSize = new System.Drawing.Size(800, 550);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelFoot);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormPhieuMuon";
             this.Text = "FormPhieuMuon";
             this.Load += new System.EventHandler(this.FormPhieuMuon_Load);
