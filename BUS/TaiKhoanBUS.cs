@@ -71,6 +71,20 @@ namespace LibraryProject.BUS
             return TaiKhoanDAO.Instance.XoaTaiKhoan(MaThuThu);
         }
 
+        public bool SuaTaiKhoan(DataGridView data)
+        {
+            DataGridViewRow row = data.SelectedCells[0].OwningRow;
+            string MaThuThu = row.Cells["Mã"].Value.ToString();
+            string MatKhau = row.Cells["Mật Khẩu"].Value.ToString();
+            string ChucVu = row.Cells["Chức vụ"].Value.ToString();
 
+            TaiKhoanDTO taiKhoan = new TaiKhoanDTO()
+            {
+                TaiKhoan = MaThuThu,
+                MatKhau = MatKhau,
+                ChucVu = ChucVu
+            };
+            return TaiKhoanDAO.Instance.SuaTaiKhoan(taiKhoan);
+        }
     }
 }

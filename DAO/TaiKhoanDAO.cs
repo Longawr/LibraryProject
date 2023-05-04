@@ -61,5 +61,13 @@ namespace LibraryProject.DAO
 
 
         public void DangXuat() { }
+
+        public bool SuaTaiKhoan(TaiKhoanDTO taiKhoan)
+        {
+            string sql = "UPDATE [dbo].[TaiKhoan]" +
+                "SET [MatKhau] = @MatKhau ,[ChucVu] = @Chucvu WHERE [TaiKhoan] = @TaiKhoan";
+            object[] pmt = new object[] { taiKhoan.TaiKhoan, taiKhoan.MatKhau, taiKhoan.ChucVu };
+            return DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0;
+        }
     }
 }
