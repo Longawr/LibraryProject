@@ -36,6 +36,7 @@ namespace LibraryProject
             this.panelHead = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnQuenMK = new System.Windows.Forms.Button();
             this.btbLogin = new System.Windows.Forms.Button();
@@ -45,15 +46,14 @@ namespace LibraryProject
             this.panelUser = new System.Windows.Forms.Panel();
             this.tbxUser = new System.Windows.Forms.TextBox();
             this.pbxUser = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSide.SuspendLayout();
             this.panelHead.SuspendLayout();
             this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPassword)).BeginInit();
             this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSide
@@ -62,10 +62,9 @@ namespace LibraryProject
             this.panelSide.Controls.Add(this.lblProducer);
             this.panelSide.Controls.Add(this.lblTitle);
             this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSide.Location = new System.Drawing.Point(0, 38);
-            this.panelSide.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelSide.Location = new System.Drawing.Point(0, 30);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(369, 650);
+            this.panelSide.Size = new System.Drawing.Size(328, 770);
             this.panelSide.TabIndex = 0;
             // 
             // lblProducer
@@ -73,9 +72,9 @@ namespace LibraryProject
             this.lblProducer.AutoSize = true;
             this.lblProducer.Font = new System.Drawing.Font("Segoe UI Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProducer.ForeColor = System.Drawing.Color.White;
-            this.lblProducer.Location = new System.Drawing.Point(300, 678);
+            this.lblProducer.Location = new System.Drawing.Point(270, 742);
             this.lblProducer.Name = "lblProducer";
-            this.lblProducer.Size = new System.Drawing.Size(65, 21);
+            this.lblProducer.Size = new System.Drawing.Size(58, 19);
             this.lblProducer.TabIndex = 1;
             this.lblProducer.Text = "Nhóm X";
             // 
@@ -84,37 +83,36 @@ namespace LibraryProject
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTitle.Location = new System.Drawing.Point(60, 214);
+            this.lblTitle.Location = new System.Drawing.Point(57, 340);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(250, 76);
+            this.lblTitle.Size = new System.Drawing.Size(216, 64);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Phần Mềm\r\nQuản Lý Thư Viện";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelHead
             // 
-            this.panelHead.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelHead.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panelHead.Controls.Add(this.btnClose);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
-            this.panelHead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(900, 38);
+            this.panelHead.Size = new System.Drawing.Size(1000, 30);
             this.panelHead.TabIndex = 1;
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Gray;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(866, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClose.Location = new System.Drawing.Point(970, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(34, 38);
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -131,19 +129,29 @@ namespace LibraryProject
             this.panelMain.Controls.Add(this.panelUser);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(900, 688);
+            this.panelMain.Size = new System.Drawing.Size(1000, 800);
             this.panelMain.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(476, 249);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 63);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.lblLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblLogin.Location = new System.Drawing.Point(485, 126);
+            this.lblLogin.Location = new System.Drawing.Point(569, 263);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(104, 45);
+            this.lblLogin.Size = new System.Drawing.Size(89, 37);
             this.lblLogin.TabIndex = 5;
             this.lblLogin.Text = "Login";
             this.lblLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,10 +165,9 @@ namespace LibraryProject
             this.btnQuenMK.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuenMK.ForeColor = System.Drawing.Color.Gray;
             this.btnQuenMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuenMK.Location = new System.Drawing.Point(551, 358);
-            this.btnQuenMK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnQuenMK.Location = new System.Drawing.Point(628, 448);
             this.btnQuenMK.Name = "btnQuenMK";
-            this.btnQuenMK.Size = new System.Drawing.Size(142, 38);
+            this.btnQuenMK.Size = new System.Drawing.Size(126, 30);
             this.btnQuenMK.TabIndex = 4;
             this.btnQuenMK.Text = "Quên mật khẩu";
             this.btnQuenMK.UseVisualStyleBackColor = false;
@@ -174,10 +181,9 @@ namespace LibraryProject
             this.btbLogin.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btbLogin.ForeColor = System.Drawing.Color.Yellow;
             this.btbLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btbLogin.Location = new System.Drawing.Point(432, 358);
-            this.btbLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btbLogin.Location = new System.Drawing.Point(522, 448);
             this.btbLogin.Name = "btbLogin";
-            this.btbLogin.Size = new System.Drawing.Size(112, 38);
+            this.btbLogin.Size = new System.Drawing.Size(100, 30);
             this.btbLogin.TabIndex = 3;
             this.btbLogin.Text = "Login";
             this.btbLogin.UseVisualStyleBackColor = false;
@@ -188,10 +194,9 @@ namespace LibraryProject
             this.panelPassword.BackColor = System.Drawing.SystemColors.Control;
             this.panelPassword.Controls.Add(this.tbxPassword);
             this.panelPassword.Controls.Add(this.pbxPassword);
-            this.panelPassword.Location = new System.Drawing.Point(432, 290);
-            this.panelPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelPassword.Location = new System.Drawing.Point(522, 394);
             this.panelPassword.Name = "panelPassword";
-            this.panelPassword.Size = new System.Drawing.Size(394, 50);
+            this.panelPassword.Size = new System.Drawing.Size(350, 40);
             this.panelPassword.TabIndex = 1;
             // 
             // tbxPassword
@@ -200,10 +205,9 @@ namespace LibraryProject
             this.tbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxPassword.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxPassword.Location = new System.Drawing.Point(61, 11);
-            this.tbxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxPassword.Location = new System.Drawing.Point(54, 9);
             this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(316, 26);
+            this.tbxPassword.Size = new System.Drawing.Size(281, 21);
             this.tbxPassword.TabIndex = 2;
             this.tbxPassword.Text = " Password";
             this.tbxPassword.UseSystemPasswordChar = true;
@@ -214,10 +218,9 @@ namespace LibraryProject
             // pbxPassword
             // 
             this.pbxPassword.Image = global::LibraryProject.Properties.Resources.padlock;
-            this.pbxPassword.Location = new System.Drawing.Point(7, 6);
-            this.pbxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pbxPassword.Location = new System.Drawing.Point(6, 5);
             this.pbxPassword.Name = "pbxPassword";
-            this.pbxPassword.Size = new System.Drawing.Size(34, 38);
+            this.pbxPassword.Size = new System.Drawing.Size(30, 30);
             this.pbxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxPassword.TabIndex = 1;
             this.pbxPassword.TabStop = false;
@@ -227,10 +230,9 @@ namespace LibraryProject
             this.panelUser.BackColor = System.Drawing.SystemColors.Control;
             this.panelUser.Controls.Add(this.tbxUser);
             this.panelUser.Controls.Add(this.pbxUser);
-            this.panelUser.Location = new System.Drawing.Point(432, 224);
-            this.panelUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelUser.Location = new System.Drawing.Point(522, 341);
             this.panelUser.Name = "panelUser";
-            this.panelUser.Size = new System.Drawing.Size(394, 50);
+            this.panelUser.Size = new System.Drawing.Size(350, 40);
             this.panelUser.TabIndex = 0;
             // 
             // tbxUser
@@ -239,10 +241,9 @@ namespace LibraryProject
             this.tbxUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxUser.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxUser.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxUser.Location = new System.Drawing.Point(61, 11);
-            this.tbxUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxUser.Location = new System.Drawing.Point(54, 9);
             this.tbxUser.Name = "tbxUser";
-            this.tbxUser.Size = new System.Drawing.Size(316, 26);
+            this.tbxUser.Size = new System.Drawing.Size(281, 21);
             this.tbxUser.TabIndex = 1;
             this.tbxUser.Text = " Username";
             this.tbxUser.Enter += new System.EventHandler(this.tbxUser_Enter);
@@ -252,34 +253,22 @@ namespace LibraryProject
             // pbxUser
             // 
             this.pbxUser.Image = global::LibraryProject.Properties.Resources.librarian;
-            this.pbxUser.Location = new System.Drawing.Point(8, 6);
-            this.pbxUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pbxUser.Location = new System.Drawing.Point(7, 5);
             this.pbxUser.Name = "pbxUser";
-            this.pbxUser.Size = new System.Drawing.Size(34, 38);
+            this.pbxUser.Size = new System.Drawing.Size(30, 30);
             this.pbxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxUser.TabIndex = 0;
             this.pbxUser.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(380, 109);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 79);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 688);
+            this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.panelSide);
             this.Controls.Add(this.panelHead);
             this.Controls.Add(this.panelMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
@@ -289,13 +278,13 @@ namespace LibraryProject
             this.panelHead.ResumeLayout(false);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelPassword.ResumeLayout(false);
             this.panelPassword.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPassword)).EndInit();
             this.panelUser.ResumeLayout(false);
             this.panelUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

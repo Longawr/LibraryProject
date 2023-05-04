@@ -38,7 +38,7 @@ namespace LibraryProject.BUS
         {
             PhieuTraDTO phieuTra = new PhieuTraDTO();
             phieuTra.MaPT = "PT" + phieuTra.MaPM.Substring(3) + phieuTra.MaSach.Substring(2) + DateTime.Now.ToString("yyyyMMdd").Substring(6) + DateTime.Now.ToString("HHmmss").Remove(2);
-            phieuTra.TaiKhoan = NhanVienBUS.currentNhanVien.MaNhanVien;
+            phieuTra.TaiKhoan = ThuThuBUS.currentNhanVien.MaThuThu;
             phieuTra.MaPM = dataMain.SelectedCells[0].OwningRow.Cells["Mã Mượn"].Value.ToString();
             phieuTra.MaSach = dataMain.SelectedCells[0].OwningRow.Cells["Mã Sách"].Value.ToString();
             phieuTra.SoLuong = soLuong;
@@ -61,7 +61,7 @@ namespace LibraryProject.BUS
             if (TaiKhoan != String.Empty)
                 phieuTra.TaiKhoan = TaiKhoan;
             else
-                phieuTra.TaiKhoan = NhanVienBUS.currentNhanVien.MaNhanVien;
+                phieuTra.TaiKhoan = ThuThuBUS.currentNhanVien.MaThuThu;
 
             phieuTra.MaPM = dataMain.SelectedCells[0].OwningRow.Cells["Mã Mượn"].Value.ToString();
             phieuTra.MaSach = dataMain.SelectedCells[0].OwningRow.Cells["Mã Sách"].Value.ToString();
@@ -98,7 +98,7 @@ namespace LibraryProject.BUS
             PhieuTraDTO phieuTra = new PhieuTraDTO();
 
             phieuTra.MaPT = dataMain.SelectedCells[0].OwningRow.Cells["Mã Trả"].Value.ToString();
-            phieuTra.TaiKhoan = NhanVienBUS.currentNhanVien.MaNhanVien;
+            phieuTra.TaiKhoan = ThuThuBUS.currentNhanVien.MaThuThu;
             try
             {
                 phieuTra.TaiKhoan = dataMain.SelectedCells[0].OwningRow.Cells["Thủ Thư"].Value.ToString();

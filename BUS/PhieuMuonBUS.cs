@@ -39,7 +39,7 @@ namespace LibraryProject.BUS
             {
                 MaPM = dataMain.SelectedCells[0].OwningRow.Cells["Mã Mượn"].Value.ToString(),
                 MaDG = dataMain.SelectedCells[0].OwningRow.Cells["Độc Giả"].Value.ToString(),
-                TaiKhoan = NhanVienBUS.currentNhanVien.MaNhanVien,
+                TaiKhoan = ThuThuBUS.currentNhanVien.MaThuThu,
                 NgayMuon = DateTime.Now,
                 HanTra = (DateTime)dataMain.SelectedCells[0].OwningRow.Cells["Hạn Trả"].Value,
                 DaTraXong = false

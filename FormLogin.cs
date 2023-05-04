@@ -87,7 +87,7 @@ namespace LibraryProject
             {
                 if (TaiKhoanBUS.Instance.DangNhap(tbxUser.Text, tbxPassword.Text))
                 {
-                    NhanVienBUS.Instance.AddCurrentNhanVien(tbxUser.Text);
+                    ThuThuBUS.Instance.AddCurrentNhanVien(tbxUser.Text);
                     FormDashBoard mainForm = new FormDashBoard();
                     mainForm.Show();
                     this.Hide();

@@ -54,7 +54,7 @@ namespace LibraryProject
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 74);
+            this.panel1.Size = new System.Drawing.Size(1000, 59);
             this.panel1.TabIndex = 0;
             // 
             // btnRefresh
@@ -62,10 +62,9 @@ namespace LibraryProject
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.ForeColor = System.Drawing.Color.Yellow;
-            this.btnRefresh.Location = new System.Drawing.Point(791, 20);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRefresh.Location = new System.Drawing.Point(891, 16);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(92, 35);
+            this.btnRefresh.Size = new System.Drawing.Size(82, 28);
             this.btnRefresh.TabIndex = 11;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -77,9 +76,9 @@ namespace LibraryProject
             this.label1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(7, 20);
+            this.label1.Location = new System.Drawing.Point(6, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 37);
+            this.label1.Size = new System.Drawing.Size(227, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "PHIẾU TRẢ SÁCH";
             // 
@@ -87,22 +86,19 @@ namespace LibraryProject
             // 
             this.panelMain.Controls.Add(this.dataMain);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 74);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelMain.Location = new System.Drawing.Point(0, 59);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(900, 549);
+            this.panelMain.Size = new System.Drawing.Size(1000, 689);
             this.panelMain.TabIndex = 10;
             // 
             // dataMain
             // 
             this.dataMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataMain.Location = new System.Drawing.Point(0, 0);
-            this.dataMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataMain.Name = "dataMain";
             this.dataMain.RowHeadersWidth = 51;
             this.dataMain.RowTemplate.Height = 24;
-            this.dataMain.Size = new System.Drawing.Size(900, 549);
+            this.dataMain.Size = new System.Drawing.Size(1000, 689);
             this.dataMain.TabIndex = 0;
             // 
             // panelFoot
@@ -113,20 +109,18 @@ namespace LibraryProject
             this.panelFoot.Controls.Add(this.btnThem);
             this.panelFoot.Controls.Add(this.tbxSearch);
             this.panelFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFoot.Location = new System.Drawing.Point(0, 623);
-            this.panelFoot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelFoot.Location = new System.Drawing.Point(0, 748);
             this.panelFoot.Name = "panelFoot";
-            this.panelFoot.Size = new System.Drawing.Size(900, 65);
+            this.panelFoot.Size = new System.Drawing.Size(1000, 52);
             this.panelFoot.TabIndex = 9;
             // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.White;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Location = new System.Drawing.Point(799, 15);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSua.Location = new System.Drawing.Point(898, 11);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(84, 35);
+            this.btnSua.Size = new System.Drawing.Size(75, 28);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -136,10 +130,9 @@ namespace LibraryProject
             // 
             this.btnXoa.BackColor = System.Drawing.Color.White;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Location = new System.Drawing.Point(680, 15);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoa.Location = new System.Drawing.Point(792, 11);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(84, 35);
+            this.btnXoa.Size = new System.Drawing.Size(75, 28);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -149,10 +142,9 @@ namespace LibraryProject
             // 
             this.btnThem.BackColor = System.Drawing.Color.White;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Location = new System.Drawing.Point(559, 15);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThem.Location = new System.Drawing.Point(685, 11);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(84, 35);
+            this.btnThem.Size = new System.Drawing.Size(75, 28);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -162,10 +154,9 @@ namespace LibraryProject
             // 
             this.tbxSearch.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxSearch.Location = new System.Drawing.Point(14, 14);
-            this.tbxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxSearch.Location = new System.Drawing.Point(12, 11);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(508, 32);
+            this.tbxSearch.Size = new System.Drawing.Size(452, 28);
             this.tbxSearch.TabIndex = 1;
             this.tbxSearch.Text = " Tìm Kiếm";
             this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
@@ -174,15 +165,14 @@ namespace LibraryProject
             // 
             // FormPhieuTra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 688);
+            this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelFoot);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormPhieuTra";
             this.Text = "FormPhieuTra";
             this.Load += new System.EventHandler(this.FormPhieuTra_Load);

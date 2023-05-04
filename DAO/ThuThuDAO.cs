@@ -2,15 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LibraryProject.DAO
 {
     class ThuThuDAO
     {
         private static ThuThuDAO instance;
+
         public static ThuThuDAO Instance
         {
             get
@@ -19,115 +22,82 @@ namespace LibraryProject.DAO
                     instance = new ThuThuDAO();
                 return instance;
             }
-            //set => instance = value;
+            //set => instance = value; 
         }
 
-        public ThuThuDAO() { }
+        private ThuThuDAO() { }
+
+        public DataTable XemThuThuQuaId(String id)
+        {
+            string query = "SELECT * FROM [ThuThu] WHERE [MaThuThu] = @id";
+
+            object[] obj = new object[] { id };
+
+            DataTable dTable = DataProvider.Instance.ExecuteQuery(query, obj);
+
+            return dTable;
+        }
 
         public DataTable Xem()
         {
-            try
-            {
-                string sql = "select * from ThuThu";
-                return DataProvider.Instance.ExecuteQuery(sql);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            string sql = "select * from ThuThu";
+            return DataProvider.Instance.ExecuteQuery(sql);
+        }
+
+        public object XemTTnTK()
+        {
+            string sql = " SELECT tt.[MaThuThu] N'Mã'" +
+                ", tt.[TenThuThu] N'Tên'" +
+                ",tt.[NgaySinh] N'Ngày Sinh'" +
+                ",tt.[GioiTinh] N'Giới Tính'" +
+                ",tt.[DiaChi] N'Địa Chỉ'" +
+                ",tt.[SDT] N'SDT'" +
+                ",tt.[Email] N'Email'" +
+                ",tk.[MatKhau] N'Mật Khẩu'" +
+                ",tk.[ChucVu] N'Chức vụ'" +
+                "FROM[dbo].[ThuThu] tt INNER JOIN[dbo].[TaiKhoan] tk " +
+                "ON tt.[MaThuThu] = tk.[TaiKhoan]";
+            return DataProvider.Instance.ExecuteQuery(sql);
         }
 
         public DataTable TimKiemMaThuThu(string MaThuThu)
         {
-            try
-            {
-                object[] pmt = new object[] { "%" + MaThuThu + "%" };
-                string sql = "select * from ThuThu where MaThuThu like @MaThuThu";
+            object[] pmt = new object[] { "%" + MaThuThu + "%" };
+            string sql = "select * from ThuThu where MaThuThu like @MaThuThu";
 
-                return DataProvider.Instance.ExecuteQuery(sql, pmt);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return DataProvider.Instance.ExecuteQuery(sql, pmt);
         }
-      
 
         public bool ThemThuThu(ThuThuDTO thuThu)
         {
-            try
-            {
-                string sql = "insert into ThuThu values ( @MaThuThu , " +
-                "@TenThuThu , " +
-                "@NgaySinh , " +
-               "@GioiTinh , " +
-               "@DiaChi , " +
-               "@SDT , " +
-               "@Email )";
+            string sql = "insert into ThuThu values ( @MaThuThu , " +
+            "@TenThuThu , " +
+            "@NgaySinh , " +
+            "@GioiTinh , " +
+            "@DiaChi , " +
+            "@SDT , " +
+            "@Email )";
 
-                object[] pmt = new object[] { thuThu.MaThuThu , thuThu.TenThuThu ,
+            object[] pmt = new object[] { thuThu.MaThuThu , thuThu.TenThuThu ,
                 thuThu.NgaySinh , thuThu.GioiTinh , thuThu.DiaChi , thuThu.SDT , thuThu.Email };
 
-                if (DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0)
-                {
-                    return true;
-                }
-                return false;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0;
         }
 
-        public bool Sua(string MaThuThu, ThuThuDTO thuThu)
+        public bool XoaThuThu(string MaThuThu)
         {
-            try
-            {
-                string sql = "update ThuThu set TenThuThu = @TenThuThu , " +
-                "NgaySinh = @NgaySinh , " +
-               "GioiTinh = @GioiTinh , " +
-               "DiaChi = @DiaChi , " +
-               "SDT = @SDT , " +
-                "Email = @Email " +
-                "where MaThuThu = @OldMaThuThu";
-                object[] pmt = new object[] {thuThu.TenThuThu, thuThu.NgaySinh, thuThu.GioiTinh,
-                thuThu.DiaChi,thuThu.SDT,thuThu.Email, MaThuThu};
-
-                if (DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0)
-                {
-                    return true;
-                }
-                return false;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
+            string sql = "DELETE FROM [dbo].[ThuThu] WHERE MaThuThu = @MaThuThu";
+            object[] pmt = new object[] { MaThuThu };
+            return DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0;
         }
 
-        public bool Xoa(string MaThuThu)
+        public bool SuaThuThu(string maNV, ThuThuDTO nhanVien)
         {
-            try
-            {
-                string sql = "delete from ThuThu where MaThuThu = @MaThuThu";
-                    
-                    //"delete from TaiKhoan where TaiKhoan = @MaThuThu";
+            string query = "UPDATE [ThuThu] SET [TenThuThu] = @TenNhanVien , [Email] = @Email , [GioiTinh] = @GioiTinh ,[DiaChi] = @DiaChi , [NgaySinh] = @NgaySinh , [SDT] = @SoDT WHERE [MaThuThu] = @MaNhanVien";
 
+            object[] obj = new object[] { nhanVien.TenThuThu, nhanVien.Email, nhanVien.GioiTinh, nhanVien.DiaChi, nhanVien.NgaySinh, nhanVien.SDT, maNV };
 
-                object[] pmt = new object[] { MaThuThu };
-                if (DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0)
-                {
-                    return true;
-                }
-                return false;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
+            return DataProvider.Instance.ExecuteNonQuery(query, obj) > 0;
         }
     }
 }

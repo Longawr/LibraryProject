@@ -13,7 +13,7 @@ namespace LibraryProject.BUS
 {
     class SachBUS
     {
-        
+
         private static SachBUS instance;
         public static SachBUS Instance
         {
@@ -30,6 +30,7 @@ namespace LibraryProject.BUS
         public void Xem(DataGridView data)
         {
             data.DataSource = SachDAO.Instance.Xem();
+            DataProducer.Instance.TaoSearchCol(data);
         }
 
         /*public void TheLoai(DataGridView data)
@@ -57,7 +58,7 @@ namespace LibraryProject.BUS
         {
             DataGridViewRow row = data.SelectedCells[0].OwningRow;
             string OldMaSach = data.SelectedCells[0].OwningRow.Cells["MaSach"].Value.ToString();
-            
+
 
             string MaSach = row.Cells["MaSach"].Value.ToString();
             string TenSach = row.Cells["TenSach"].Value.ToString();

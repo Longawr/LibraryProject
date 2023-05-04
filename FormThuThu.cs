@@ -20,7 +20,7 @@ namespace LibraryProject
 
         private void FormThuThu_Load(object sender, EventArgs e)
         {
-            ThuThuBUS.Instance.Xem(dgvThuThu);
+            ThuThuBUS.Instance.XemThuThu(dgvThuThu);
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -30,32 +30,45 @@ namespace LibraryProject
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
-            FormTaoTaiKhoan addAcc = new FormTaoTaiKhoan();
-            addAcc.ShowDialog();
-            ThuThuBUS.Instance.Xem(dgvThuThu);
+            if (TaiKhoanBUS.Instance.TaoTaiKhoan(dgvThuThu))
+                if (ThuThuBUS.Instance.ThemThuThu(dgvThuThu))
+                {
+                    MessageBox.Show("Them Thanh Cong");
+                    ThuThuBUS.Instance.XemThuThu(dgvThuThu);
+                    return;
+                }
+                else
+                    TaiKhoanBUS.Instance.XoaTaiKhoan(dgvThuThu);
+            MessageBox.Show("Them khong Thanh Cong");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (ThuThuBUS.Instance.Xoa(dgvThuThu) && TaiKhoanBUS.Instance.Xoa(dgvThuThu))
-            {
-                MessageBox.Show("Xoa Thanh Cong");
-                ThuThuBUS.Instance.Xem(dgvThuThu);
-            }
-            else
-                MessageBox.Show("Xoa khong Thanh Cong");
+            if (ThuThuBUS.Instance.XoaThuThu(dgvThuThu))
+                if (TaiKhoanBUS.Instance.XoaTaiKhoan(dgvThuThu))
+                {
+                    MessageBox.Show("Xoa Thanh Cong");
+                    ThuThuBUS.Instance.XemThuThu(dgvThuThu);
+                    return;
+                }
+                else
+                    ThuThuBUS.Instance.ThemThuThu(dgvThuThu);
+            MessageBox.Show("Xoa khong Thanh Cong");
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (ThuThuBUS.Instance.Sua(dgvThuThu))
-            {
+            bool thuThu = ThuThuBUS.Instance.SuaThuThu(dgvThuThu);
+            bool taiKhoan = TaiKhoanBUS.Instance.SuaTaiKhoan(dgvThuThu);
+            if (thuThu && taiKhoan)
                 MessageBox.Show("Sua Thanh Cong");
-                ThuThuBUS.Instance.Xem(dgvThuThu);
-            }
+            else if (!thuThu && !taiKhoan)
+                MessageBox.Show("Sua Khong Thanh Cong");
+            else if (!thuThu)
+                MessageBox.Show("Sua Thu Thu Khong Thanh Cong");
             else
-                MessageBox.Show("Sua khong Thanh Cong");
+                MessageBox.Show("Sua Tai Khoan Khong Thanh Cong");
+            ThuThuBUS.Instance.XemThuThu(dgvThuThu);
         }
     }
 }

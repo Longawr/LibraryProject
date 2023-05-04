@@ -41,13 +41,13 @@ namespace LibraryProject
             DateTime result = DateTime.ParseExact("19000101", "yyyyMMdd",
                 CultureInfo.InvariantCulture);
 
-            tbxMaNV.Text = NhanVienBUS.currentNhanVien.MaNhanVien;
-            tbxTenNV.Text = NhanVienBUS.currentNhanVien.TenNhanVien;
-            tbxEmail.Text = NhanVienBUS.currentNhanVien.Email;
-            cbxGioiTinh.Text = NhanVienBUS.currentNhanVien.GioiTinh ? "Nam" : "Nữ";
-            dtpkNgaySinh.Value = NhanVienBUS.currentNhanVien.NgaySinh != null ? NhanVienBUS.currentNhanVien.NgaySinh : result;
-            tbxSoDT.Text = NhanVienBUS.currentNhanVien.SoDienThoai;
-            tbxDiaChi.Text = NhanVienBUS.currentNhanVien.DiaChi;
+            tbxMaNV.Text = ThuThuBUS.currentNhanVien.MaThuThu;
+            tbxTenNV.Text = ThuThuBUS.currentNhanVien.TenThuThu;
+            tbxEmail.Text = ThuThuBUS.currentNhanVien.Email;
+            cbxGioiTinh.Text = ThuThuBUS.currentNhanVien.GioiTinh ? "Nam" : "Nữ";
+            dtpkNgaySinh.Value = ThuThuBUS.currentNhanVien.NgaySinh != null ? ThuThuBUS.currentNhanVien.NgaySinh : result;
+            tbxSoDT.Text = ThuThuBUS.currentNhanVien.SDT;
+            tbxDiaChi.Text = ThuThuBUS.currentNhanVien.DiaChi;
         }
 
         private void btnDoiMK_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace LibraryProject
         private void btnLuu_Click(object sender, EventArgs e)
         {
             bool gioiTinh = cbxGioiTinh.Text == "Nam";
-            if (NhanVienBUS.Instance.SuaCurrentNhanVien(tbxMaNV.Text, tbxTenNV.Text, dtpkNgaySinh.Value, tbxSoDT.Text, tbxEmail.Text, gioiTinh, tbxDiaChi.Text))
+            if (ThuThuBUS.Instance.SuaCurrentNhanVien(tbxMaNV.Text, tbxTenNV.Text, dtpkNgaySinh.Value, tbxSoDT.Text, tbxEmail.Text, gioiTinh, tbxDiaChi.Text))
             {
                 MessageBox.Show("Lưu thành công", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 OnDataAvailable(null);

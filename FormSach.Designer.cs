@@ -67,11 +67,11 @@ namespace LibraryProject
             this.groupBox1.Controls.Add(this.tBxTenSach);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnTimKiem);
-            this.groupBox1.Location = new System.Drawing.Point(0, 420);
+            this.groupBox1.Location = new System.Drawing.Point(3, 587);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(885, 209);
+            this.groupBox1.Size = new System.Drawing.Size(997, 167);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sách";
@@ -79,10 +79,10 @@ namespace LibraryProject
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.Aqua;
-            this.btnThem.Location = new System.Drawing.Point(667, 77);
+            this.btnThem.Location = new System.Drawing.Point(593, 62);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(93, 32);
+            this.btnThem.Size = new System.Drawing.Size(83, 26);
             this.btnThem.TabIndex = 33;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -91,10 +91,10 @@ namespace LibraryProject
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.Yellow;
-            this.btnXoa.Location = new System.Drawing.Point(667, 123);
+            this.btnXoa.Location = new System.Drawing.Point(593, 98);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(93, 32);
+            this.btnXoa.Size = new System.Drawing.Size(83, 26);
             this.btnXoa.TabIndex = 32;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -104,10 +104,10 @@ namespace LibraryProject
             // 
             this.btnSua.BackColor = System.Drawing.Color.Red;
             this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnSua.Location = new System.Drawing.Point(786, 77);
+            this.btnSua.Location = new System.Drawing.Point(699, 62);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(93, 32);
+            this.btnSua.Size = new System.Drawing.Size(83, 26);
             this.btnSua.TabIndex = 31;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -116,9 +116,9 @@ namespace LibraryProject
             // lblTheLoai
             // 
             this.lblTheLoai.AutoSize = true;
-            this.lblTheLoai.Location = new System.Drawing.Point(15, 130);
+            this.lblTheLoai.Location = new System.Drawing.Point(13, 104);
             this.lblTheLoai.Name = "lblTheLoai";
-            this.lblTheLoai.Size = new System.Drawing.Size(64, 20);
+            this.lblTheLoai.Size = new System.Drawing.Size(59, 17);
             this.lblTheLoai.TabIndex = 30;
             this.lblTheLoai.Text = "Thể loại";
             // 
@@ -126,10 +126,10 @@ namespace LibraryProject
             // 
             this.btnLoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnLoc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLoc.Location = new System.Drawing.Point(452, 123);
+            this.btnLoc.Location = new System.Drawing.Point(402, 98);
             this.btnLoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLoc.Name = "btnLoc";
-            this.btnLoc.Size = new System.Drawing.Size(93, 32);
+            this.btnLoc.Size = new System.Drawing.Size(83, 26);
             this.btnLoc.TabIndex = 29;
             this.btnLoc.Text = "Lọc";
             this.btnLoc.UseVisualStyleBackColor = false;
@@ -138,18 +138,19 @@ namespace LibraryProject
             // cBxTheLoai
             // 
             this.cBxTheLoai.FormattingEnabled = true;
-            this.cBxTheLoai.Location = new System.Drawing.Point(102, 127);
+            this.cBxTheLoai.Location = new System.Drawing.Point(91, 102);
+            this.cBxTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBxTheLoai.Name = "cBxTheLoai";
-            this.cBxTheLoai.Size = new System.Drawing.Size(320, 28);
+            this.cBxTheLoai.Size = new System.Drawing.Size(285, 24);
             this.cBxTheLoai.TabIndex = 28;
             // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.Magenta;
-            this.btnRefresh.Location = new System.Drawing.Point(786, 123);
+            this.btnRefresh.Location = new System.Drawing.Point(699, 98);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(93, 32);
+            this.btnRefresh.Size = new System.Drawing.Size(83, 26);
             this.btnRefresh.TabIndex = 27;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -157,18 +158,18 @@ namespace LibraryProject
             // 
             // tBxTenSach
             // 
-            this.tBxTenSach.Location = new System.Drawing.Point(102, 74);
+            this.tBxTenSach.Location = new System.Drawing.Point(91, 59);
             this.tBxTenSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tBxTenSach.Name = "tBxTenSach";
-            this.tBxTenSach.Size = new System.Drawing.Size(320, 26);
+            this.tBxTenSach.Size = new System.Drawing.Size(285, 22);
             this.tBxTenSach.TabIndex = 21;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 74);
+            this.label3.Location = new System.Drawing.Point(4, 59);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 20);
+            this.label3.Size = new System.Drawing.Size(67, 17);
             this.label3.TabIndex = 16;
             this.label3.Text = "Tên sách";
             // 
@@ -176,10 +177,10 @@ namespace LibraryProject
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnTimKiem.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnTimKiem.Location = new System.Drawing.Point(452, 74);
+            this.btnTimKiem.Location = new System.Drawing.Point(402, 59);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(93, 32);
+            this.btnTimKiem.Size = new System.Drawing.Size(83, 26);
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
@@ -193,7 +194,7 @@ namespace LibraryProject
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(897, 414);
+            this.groupBox2.Size = new System.Drawing.Size(1000, 581);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Sách trong kho";
@@ -201,13 +202,13 @@ namespace LibraryProject
             // dgvSach
             // 
             this.dgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSach.Location = new System.Drawing.Point(3, 23);
+            this.dgvSach.Location = new System.Drawing.Point(0, -2);
             this.dgvSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvSach.Name = "dgvSach";
             this.dgvSach.RowHeadersVisible = false;
             this.dgvSach.RowHeadersWidth = 62;
             this.dgvSach.RowTemplate.Height = 28;
-            this.dgvSach.Size = new System.Drawing.Size(885, 391);
+            this.dgvSach.Size = new System.Drawing.Size(1000, 579);
             this.dgvSach.TabIndex = 0;
             // 
             // panelHead
@@ -219,7 +220,7 @@ namespace LibraryProject
             this.panelHead.Location = new System.Drawing.Point(0, 0);
             this.panelHead.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(900, 57);
+            this.panelHead.Size = new System.Drawing.Size(1000, 46);
             this.panelHead.TabIndex = 0;
             // 
             // pbxSach
@@ -231,7 +232,7 @@ namespace LibraryProject
             this.pbxSach.Location = new System.Drawing.Point(0, 0);
             this.pbxSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbxSach.Name = "pbxSach";
-            this.pbxSach.Size = new System.Drawing.Size(89, 57);
+            this.pbxSach.Size = new System.Drawing.Size(79, 46);
             this.pbxSach.TabIndex = 4;
             this.pbxSach.TabStop = false;
             // 
@@ -241,9 +242,9 @@ namespace LibraryProject
             this.labelTitle.BackColor = System.Drawing.Color.LightSteelBlue;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.labelTitle.Location = new System.Drawing.Point(94, 7);
+            this.labelTitle.Location = new System.Drawing.Point(84, 6);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(123, 47);
+            this.labelTitle.Size = new System.Drawing.Size(103, 40);
             this.labelTitle.TabIndex = 3;
             this.labelTitle.Text = "SÁCH";
             // 
@@ -253,21 +254,21 @@ namespace LibraryProject
             this.panelMain.Controls.Add(this.groupBox1);
             this.panelMain.Controls.Add(this.groupBox2);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 57);
+            this.panelMain.Location = new System.Drawing.Point(0, 46);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(900, 631);
+            this.panelMain.Size = new System.Drawing.Size(1000, 754);
             this.panelMain.TabIndex = 4;
             // 
             // FormSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 688);
+            this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHead);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSach";
             this.Text = "d";
             this.Load += new System.EventHandler(this.FormSach_Load);

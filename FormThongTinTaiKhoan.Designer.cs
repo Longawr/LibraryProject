@@ -37,6 +37,10 @@ namespace LibraryProject
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.tbxSoDT = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpkNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cbxGioiTinh = new System.Windows.Forms.ComboBox();
             this.tbxDiaChi = new System.Windows.Forms.TextBox();
             this.tbxEmail = new System.Windows.Forms.TextBox();
@@ -45,12 +49,7 @@ namespace LibraryProject
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dtpkNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbxSoDT = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panelHead.SuspendLayout();
-            this.panelFoot.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +57,7 @@ namespace LibraryProject
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(278, 9);
+            this.lblTitle.Location = new System.Drawing.Point(390, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(200, 23);
             this.lblTitle.TabIndex = 0;
@@ -67,29 +66,29 @@ namespace LibraryProject
             // panelHead
             // 
             this.panelHead.BackColor = System.Drawing.Color.Gray;
+            this.panelHead.Controls.Add(this.btnLuu);
             this.panelHead.Controls.Add(this.lblTitle);
+            this.panelHead.Controls.Add(this.btnDoiMK);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
             this.panelHead.Name = "panelHead";
-            this.panelHead.Size = new System.Drawing.Size(800, 40);
+            this.panelHead.Size = new System.Drawing.Size(1000, 40);
             this.panelHead.TabIndex = 1;
             // 
             // panelFoot
             // 
             this.panelFoot.BackColor = System.Drawing.Color.DimGray;
-            this.panelFoot.Controls.Add(this.btnLuu);
-            this.panelFoot.Controls.Add(this.btnDoiMK);
             this.panelFoot.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFoot.Location = new System.Drawing.Point(0, 500);
+            this.panelFoot.Location = new System.Drawing.Point(0, 750);
             this.panelFoot.Name = "panelFoot";
-            this.panelFoot.Size = new System.Drawing.Size(800, 50);
+            this.panelFoot.Size = new System.Drawing.Size(1000, 50);
             this.panelFoot.TabIndex = 2;
             // 
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.White;
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Location = new System.Drawing.Point(175, 9);
+            this.btnLuu.Location = new System.Drawing.Point(155, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(126, 32);
             this.btnLuu.TabIndex = 5;
@@ -101,7 +100,7 @@ namespace LibraryProject
             // 
             this.btnDoiMK.BackColor = System.Drawing.Color.White;
             this.btnDoiMK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoiMK.Location = new System.Drawing.Point(25, 9);
+            this.btnDoiMK.Location = new System.Drawing.Point(12, 4);
             this.btnDoiMK.Name = "btnDoiMK";
             this.btnDoiMK.Size = new System.Drawing.Size(125, 32);
             this.btnDoiMK.TabIndex = 3;
@@ -148,8 +147,45 @@ namespace LibraryProject
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 40);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(800, 460);
+            this.panelMain.Size = new System.Drawing.Size(1000, 710);
             this.panelMain.TabIndex = 3;
+            // 
+            // tbxSoDT
+            // 
+            this.tbxSoDT.BackColor = System.Drawing.SystemColors.Control;
+            this.tbxSoDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxSoDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxSoDT.Location = new System.Drawing.Point(662, 110);
+            this.tbxSoDT.Name = "tbxSoDT";
+            this.tbxSoDT.Size = new System.Drawing.Size(237, 20);
+            this.tbxSoDT.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(599, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 20);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "SĐT:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(556, 60);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 20);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Ngày Sinh:";
+            // 
+            // dtpkNgaySinh
+            // 
+            this.dtpkNgaySinh.Location = new System.Drawing.Point(662, 58);
+            this.dtpkNgaySinh.Name = "dtpkNgaySinh";
+            this.dtpkNgaySinh.Size = new System.Drawing.Size(241, 22);
+            this.dtpkNgaySinh.TabIndex = 14;
             // 
             // cbxGioiTinh
             // 
@@ -160,7 +196,7 @@ namespace LibraryProject
             this.cbxGioiTinh.Items.AddRange(new object[] {
             "Nữ",
             "Nam"});
-            this.cbxGioiTinh.Location = new System.Drawing.Point(180, 213);
+            this.cbxGioiTinh.Location = new System.Drawing.Point(662, 160);
             this.cbxGioiTinh.Name = "cbxGioiTinh";
             this.cbxGioiTinh.Size = new System.Drawing.Size(121, 28);
             this.cbxGioiTinh.TabIndex = 13;
@@ -170,7 +206,7 @@ namespace LibraryProject
             this.tbxDiaChi.BackColor = System.Drawing.SystemColors.Control;
             this.tbxDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxDiaChi.Location = new System.Drawing.Point(180, 269);
+            this.tbxDiaChi.Location = new System.Drawing.Point(180, 214);
             this.tbxDiaChi.Name = "tbxDiaChi";
             this.tbxDiaChi.Size = new System.Drawing.Size(410, 20);
             this.tbxDiaChi.TabIndex = 12;
@@ -182,7 +218,7 @@ namespace LibraryProject
             this.tbxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxEmail.Location = new System.Drawing.Point(180, 163);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(237, 20);
+            this.tbxEmail.Size = new System.Drawing.Size(342, 20);
             this.tbxEmail.TabIndex = 10;
             // 
             // tbxTenNV
@@ -192,7 +228,7 @@ namespace LibraryProject
             this.tbxTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTenNV.Location = new System.Drawing.Point(180, 110);
             this.tbxTenNV.Name = "tbxTenNV";
-            this.tbxTenNV.Size = new System.Drawing.Size(182, 20);
+            this.tbxTenNV.Size = new System.Drawing.Size(255, 20);
             this.tbxTenNV.TabIndex = 9;
             // 
             // tbxMaNV
@@ -209,7 +245,7 @@ namespace LibraryProject
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(95, 269);
+            this.label5.Location = new System.Drawing.Point(95, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 20);
             this.label5.TabIndex = 7;
@@ -219,7 +255,7 @@ namespace LibraryProject
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(83, 216);
+            this.label4.Location = new System.Drawing.Point(565, 163);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 6;
@@ -235,48 +271,11 @@ namespace LibraryProject
             this.label3.TabIndex = 5;
             this.label3.Text = "Email:";
             // 
-            // dtpkNgaySinh
-            // 
-            this.dtpkNgaySinh.Location = new System.Drawing.Point(520, 58);
-            this.dtpkNgaySinh.Name = "dtpkNgaySinh";
-            this.dtpkNgaySinh.Size = new System.Drawing.Size(241, 22);
-            this.dtpkNgaySinh.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(414, 60);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 20);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Ngày Sinh:";
-            // 
-            // tbxSoDT
-            // 
-            this.tbxSoDT.BackColor = System.Drawing.SystemColors.Control;
-            this.tbxSoDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxSoDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxSoDT.Location = new System.Drawing.Point(520, 90);
-            this.tbxSoDT.Name = "tbxSoDT";
-            this.tbxSoDT.Size = new System.Drawing.Size(237, 20);
-            this.tbxSoDT.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(457, 90);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 20);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "SĐT:";
-            // 
             // FormThongTinTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 550);
+            this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelFoot);
             this.Controls.Add(this.panelHead);
@@ -286,7 +285,6 @@ namespace LibraryProject
             this.Load += new System.EventHandler(this.FormThongTinTaiKhoan_Load);
             this.panelHead.ResumeLayout(false);
             this.panelHead.PerformLayout();
-            this.panelFoot.ResumeLayout(false);
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.ResumeLayout(false);

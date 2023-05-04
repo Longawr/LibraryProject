@@ -68,7 +68,7 @@ namespace LibraryProject
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            TaiKhoanBUS.DangXuat();
+            TaiKhoanBUS.Instance.DangXuat();
             Application.Exit();
         }
 
@@ -108,7 +108,7 @@ namespace LibraryProject
 
         private void FormDashBoard_Load(object sender, EventArgs e)
         {
-            helloText = NhanVienBUS.currentNhanVien.TenNhanVien;
+            helloText = ThuThuBUS.currentNhanVien.TenThuThu;
             FormBUS.Instance.loadForm(this.panelMain, new FormSach());
         }
 
@@ -120,7 +120,7 @@ namespace LibraryProject
                                         MessageBoxIcon.Warning);
             if (confirmResult == DialogResult.Yes)
             {
-                TaiKhoanBUS.DangXuat();
+                TaiKhoanBUS.Instance.DangXuat();
                 FormLogin loginform = new FormLogin();
                 loginform.Show();
                 this.Hide();

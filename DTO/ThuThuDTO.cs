@@ -8,52 +8,50 @@ namespace LibraryProject.DTO
 {
     class ThuThuDTO
     {
-        private string maThuThu;
-        public string MaThuThu
+        public string MaThuThu { get; set; }
+        public string TenThuThu { get; set; }
+        public DateTime NgaySinh { get; set; }
+        public bool GioiTinh { get; set; }
+        public string DiaChi { get; set; }
+        public string SDT { get; set; }
+        public string Email { get; set; }
+
+        public ThuThuDTO(string maNhanVien, string tenNhanVien, DateTime ngaySinh, bool gioiTinh, string diaChi, string soDienThoai, string email)
         {
-            get { return maThuThu; }
-            set { maThuThu = value; }
+            MaThuThu = maNhanVien;
+            TenThuThu = tenNhanVien;
+            NgaySinh = ngaySinh;
+            GioiTinh = gioiTinh;
+            DiaChi = diaChi;
+            SDT = soDienThoai;
+            Email = email;
         }
 
-        private string tenThuThu;
-        public string TenThuThu
+        public ThuThuDTO() { }
+
+        public override bool Equals(object obj)
         {
-            get { return tenThuThu; }
-            set { tenThuThu = value; }
+            return obj is ThuThuDTO dTO &&
+                   MaThuThu == dTO.MaThuThu &&
+                   TenThuThu == dTO.TenThuThu &&
+                   NgaySinh == dTO.NgaySinh &&
+                   GioiTinh == dTO.GioiTinh &&
+                   DiaChi == dTO.DiaChi &&
+                   SDT == dTO.SDT &&
+                   Email == dTO.Email;
         }
 
-        private DateTime ngaySinh;
-        public DateTime NgaySinh
+        public override int GetHashCode()
         {
-            get { return ngaySinh; }
-            set { ngaySinh = value; }
-        }
-
-        private bool gioiTinh;
-        public bool GioiTinh
-        {
-            get { return gioiTinh; }
-            set { gioiTinh = value; }
-        }
-
-        private string diaChi;
-        public string DiaChi
-        {
-            get { return diaChi; }
-            set { diaChi = value; }
-        }
-
-        private string sdt;
-        public string SDT
-        {
-            get { return sdt; }
-            set { sdt = value; }
-        }
-        private string email;
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
+            int hashCode = 1329759879;
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(MaThuThu);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(TenThuThu);
+            hashCode = hashCode * -1521134295 + NgaySinh.GetHashCode();
+            hashCode = hashCode * -1521134295 + GioiTinh.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(DiaChi);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(SDT);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Email);
+            return hashCode;
         }
     }
 }

@@ -42,41 +42,24 @@ namespace LibraryProject.DAO
 
             return DataProvider.Instance.ExecuteNonQuery(query, obj);
         }
-        public bool TaoTaiKhoanMoi(TaiKhoanDTO taiKhoan)
-        {
-            try
-            {
-                string sql = "insert into TaiKhoan values ( @TaiKhoan , @MatKhau , @Chucvu )";
-                object[] pmt = new object[] { taiKhoan.TaiKhoan, taiKhoan.MatKhau, taiKhoan.ChucVu };
-                if (DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0)
-                {
-                    return true;
-                }
 
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return false;
-        }
-        public bool Xoa(string MaThuThu)
+        public bool TaoTaiKhoan(TaiKhoanDTO taiKhoan)
         {
-            try
-            {
-                string sql = "delete from TaiKhoan where TaiKhoan = @MaThuThu";
-                object[] pmt = new object[] { MaThuThu };
-                if (DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0)
-                {
-                    return true;
-                }
-                return false;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            string sql = "INSERT INTO [dbo].[TaiKhoan]([TaiKhoan],[MatKhau],[ChucVu])" +
+                "VALUES( @TaiKhoan , @MatKhau , @Chucvu )";
+            object[] pmt = new object[] { taiKhoan.TaiKhoan, taiKhoan.MatKhau, taiKhoan.ChucVu };
+            return DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0;
         }
+
+        public bool XoaTaiKhoan(string MaThuThu)
+        {
+            string sql = "delete from TaiKhoan where TaiKhoan = @MaThuThu";
+            object[] pmt = new object[] { MaThuThu };
+            return DataProvider.Instance.ExecuteNonQuery(sql, pmt) > 0;
+        }
+
+
+
         public void DangXuat() { }
     }
 }

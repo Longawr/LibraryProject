@@ -25,7 +25,7 @@ namespace LibraryProject.DAO
 
         public DataProvider() { }
 
-        private readonly string connString = @"Data Source=DESKTOP-DUY2010\SQLEXPRESS;Initial Catalog=DB_LIBRARY;Integrated Security=True";
+        private readonly string connString = @"Data Source=NGOCTRINH;Initial Catalog=DB_LIBRARY;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameters = null)
         {
@@ -100,8 +100,7 @@ namespace LibraryProject.DAO
                 }
                 catch (Exception e)
                 {
-                    throw e;
-                    //MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

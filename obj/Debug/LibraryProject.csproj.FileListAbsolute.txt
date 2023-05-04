@@ -128,3 +128,7 @@ D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormChartMuon.resources
 D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormChartTra.resources
 D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormTopDocGia.resources
 D:\HK2-2023\LibraryProject\obj\Debug\LibraryProject.FormTopSach.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormChartMuon.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormChartTra.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormTopDocGia.resources
+D:\projects\cs\LibraryProject\obj\Debug\LibraryProject.FormTopSach.resources

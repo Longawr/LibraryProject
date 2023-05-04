@@ -38,7 +38,7 @@ namespace LibraryProject
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria Math", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(243, 138);
+            this.label1.Location = new System.Drawing.Point(343, 263);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(329, 224);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace LibraryProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 550);
+            this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCaiDat";

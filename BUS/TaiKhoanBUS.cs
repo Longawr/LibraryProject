@@ -31,34 +31,46 @@ namespace LibraryProject.BUS
             return TaiKhoanDAO.Instance.XacNhanTkMk(uname, upass);
         }
 
-        public static void DangXuat()
+        public void DangXuat()
         {
-            NhanVienBUS.currentNhanVien = new DTO.NhanVienDTO();
+            ThuThuBUS.currentNhanVien = new DTO.ThuThuDTO();
             TaiKhoanDAO.Instance.DangXuat();
         }
 
         public bool XacNhanMK(string matKhau)
         {
-            string username = NhanVienBUS.currentNhanVien.MaNhanVien;
+            string username = ThuThuBUS.currentNhanVien.MaThuThu;
             return TaiKhoanDAO.Instance.XacNhanTkMk(username, matKhau);
         }
 
         public void DoiMatKhau(string mkMoi)
         {
-            string username = NhanVienBUS.currentNhanVien.MaNhanVien;
+            string username = ThuThuBUS.currentNhanVien.MaThuThu;
             TaiKhoanDAO.Instance.DoiMatKhau(username, mkMoi);
         }
 
-        public bool TaoTaiKhoanMoi(TaiKhoanDTO taiKhoan)
+        public bool TaoTaiKhoan(DataGridView data)
         {
-            TaiKhoanDAO.Instance.TaoTaiKhoanMoi(taiKhoan);
-            return TaiKhoanDAO.Instance.TaoTaiKhoanMoi(taiKhoan);
+            DataGridViewRow row = data.SelectedCells[0].OwningRow;
+            string MaThuThu = row.Cells["Mã"].Value.ToString();
+            string MatKhau = row.Cells["Mật Khẩu"].Value.ToString();
+            string ChucVu = row.Cells["Chức vụ"].Value.ToString();
+
+            TaiKhoanDTO taiKhoan = new TaiKhoanDTO()
+            {
+                TaiKhoan = MaThuThu,
+                MatKhau = MatKhau,
+                ChucVu = ChucVu
+            };
+            return TaiKhoanDAO.Instance.TaoTaiKhoan(taiKhoan);
         }
 
-        public bool Xoa(DataGridView data)
+        public bool XoaTaiKhoan(DataGridView data)
         {
             string MaThuThu = data.SelectedCells[0].OwningRow.Cells["MaThuThu"].Value.ToString();
-            return TaiKhoanDAO.Instance.Xoa(MaThuThu);
+            return TaiKhoanDAO.Instance.XoaTaiKhoan(MaThuThu);
         }
+
+
     }
 }
