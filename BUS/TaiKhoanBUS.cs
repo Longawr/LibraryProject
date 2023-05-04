@@ -1,4 +1,5 @@
 ﻿using LibraryProject.DAO;
+using LibraryProject.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,18 @@ namespace LibraryProject.BUS
         {
             string username = NhanVienBUS.currentNhanVien.MaNhanVien;
             TaiKhoanDAO.Instance.DoiMatKhau(username, mkMoi);
+        }
+
+        public bool TaoTaiKhoanMoi(TaiKhoanDTO taiKhoan)
+        {
+            TaiKhoanDAO.Instance.TaoTaiKhoanMoi(taiKhoan);
+            return TaiKhoanDAO.Instance.TaoTaiKhoanMoi(taiKhoan);
+        }
+
+        public bool Xoa(DataGridView data)
+        {
+            string MaThuThu = data.SelectedCells[0].OwningRow.Cells["MaThuThu"].Value.ToString();
+            return TaiKhoanDAO.Instance.Xoa(MaThuThu);
         }
     }
 }

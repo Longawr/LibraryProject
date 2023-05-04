@@ -1,6 +1,7 @@
 ﻿using LibraryProject.DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,9 +26,10 @@ namespace LibraryProject.BUS
 
         private ThongKeBUS() { }
 
-        public void XemThongKe(TextBox sach, TextBox theLoai, TextBox tacGia, TextBox NXB, TextBox docGia, TextBox nhanVien)
+        public void XemThongKe(TextBox sach, TextBox tongsach,TextBox theLoai, TextBox tacGia, TextBox NXB, TextBox docGia, TextBox nhanVien)
         {
             sach.Text = ThongKeDAO.Instance.XemSoSach().ToString();
+            tongsach.Text = ThongKeDAO.Instance.TongSoSach().ToString();
             theLoai.Text = ThongKeDAO.Instance.XemSoTheLoai().ToString();
             tacGia.Text = ThongKeDAO.Instance.XemSoTacGia().ToString();
             NXB.Text = ThongKeDAO.Instance.XemSoNXB().ToString();
@@ -45,6 +47,27 @@ namespace LibraryProject.BUS
         {
             data.DataSource = ThongKeDAO.Instance.XemQuaHan();
             tongSo.Text = ThongKeDAO.Instance.XemSoQuaHan().ToString();
+        }
+
+        public DataTable BieuDoMuon()
+        {
+            DataTable dt = ThongKeDAO.Instance.BieuDoMuon();
+           return dt;
+        }
+
+        public DataTable BieuDoTra()
+        {
+            DataTable dt = ThongKeDAO.Instance.BieuDoTra();
+            return dt;
+        }
+
+        public void TopDocGia(DataGridView data)
+        {
+            data.DataSource = ThongKeDAO.Instance.TopDocGia();
+        }
+        public void TopSach(DataGridView data)
+        {
+            data.DataSource = ThongKeDAO.Instance.TopSach();
         }
     }
 }
