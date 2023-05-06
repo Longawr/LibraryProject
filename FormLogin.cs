@@ -93,7 +93,7 @@ namespace LibraryProject
                     this.Hide();
                 }
                 else
-                    MessageBox.Show("Thông tin đăng nhập sai! vui lòng nhập lại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tài Khoản hoặc Mật Khẩu không đúng!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {

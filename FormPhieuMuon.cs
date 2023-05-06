@@ -73,9 +73,9 @@ namespace LibraryProject
             btnTroLai.Enabled = true;
             panelCTPM.Visible = true;
             btnXemCT.Visible = false;
+            label1.Text = dataMain.SelectedCells[0].OwningRow.Cells["Mã Mượn"].Value.ToString();
             ChiTietPMBUS.Instance.XemCTPM(dataMain);
             ChiTiet = true;
-            label1.Text = dataMain.SelectedCells[0].OwningRow.Cells["Mã Mượn"].Value.ToString();
         }
 
         private void btnTroLai_Click(object sender, EventArgs e)

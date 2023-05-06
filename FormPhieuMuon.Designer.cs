@@ -186,7 +186,7 @@ namespace LibraryProject
             this.btnXemCT.Location = new System.Drawing.Point(358, 10);
             this.btnXemCT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXemCT.Name = "btnXemCT";
-            this.btnXemCT.Size = new System.Drawing.Size(97, 27);
+            this.btnXemCT.Size = new System.Drawing.Size(117, 27);
             this.btnXemCT.TabIndex = 7;
             this.btnXemCT.Text = "Xem Chi Tiết";
             this.btnXemCT.UseVisualStyleBackColor = false;

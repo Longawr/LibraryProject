@@ -125,12 +125,12 @@ namespace LibraryProject
             // 
             // btnDangXuat
             // 
-            this.btnDangXuat.BackColor = System.Drawing.Color.Gray;
+            this.btnDangXuat.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnDangXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDangXuat.FlatAppearance.BorderSize = 0;
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(250)))));
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangXuat.Location = new System.Drawing.Point(1, 59);
             this.btnDangXuat.Name = "btnDangXuat";
@@ -142,12 +142,12 @@ namespace LibraryProject
             // 
             // btnTKInfo
             // 
-            this.btnTKInfo.BackColor = System.Drawing.Color.Gray;
+            this.btnTKInfo.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnTKInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTKInfo.FlatAppearance.BorderSize = 0;
             this.btnTKInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTKInfo.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKInfo.ForeColor = System.Drawing.Color.White;
+            this.btnTKInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(250)))));
             this.btnTKInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTKInfo.Location = new System.Drawing.Point(1, 30);
             this.btnTKInfo.Name = "btnTKInfo";
@@ -159,12 +159,12 @@ namespace LibraryProject
             // 
             // btnTaiKhoan
             // 
-            this.btnTaiKhoan.BackColor = System.Drawing.Color.DimGray;
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnTaiKhoan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
             this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaiKhoan.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.btnTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(150)))));
             this.btnTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaiKhoan.Location = new System.Drawing.Point(-13, -12);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
@@ -185,17 +185,17 @@ namespace LibraryProject
             this.panelControl.Controls.Add(this.btnThongKe);
             this.panelControl.Location = new System.Drawing.Point(3, 160);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(200, 246);
+            this.panelControl.Size = new System.Drawing.Size(200, 173);
             this.panelControl.TabIndex = 10;
             // 
             // btnSach
             // 
-            this.btnSach.BackColor = System.Drawing.Color.DimGray;
+            this.btnSach.BackColor = System.Drawing.Color.LightSteelBlue;
             this.btnSach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSach.FlatAppearance.BorderSize = 0;
             this.btnSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSach.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSach.ForeColor = System.Drawing.Color.White;
+            this.btnSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnSach.Image = global::LibraryProject.Properties.Resources.open_book__1_;
             this.btnSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSach.Location = new System.Drawing.Point(-1, -1);
